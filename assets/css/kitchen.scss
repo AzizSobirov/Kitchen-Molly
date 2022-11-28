@@ -1,0 +1,142 @@
+@import "./tools/icode";
+
+.header {
+  padding: 90px 5vw 50px;
+
+  .container {
+    @include flex(center, space-around, row, 40px);
+  }
+
+  &__swiper {
+    position: relative;
+    width: 65%;
+    @include flex;
+    .swiper-slide {
+      img {
+        width: 100%;
+      }
+    }
+
+    .swiper-pagination {
+      position: relative;
+      bottom: 0 !important;
+      min-width: 80px;
+      min-height: 32px;
+      max-width: 80px;
+      max-height: 32px;
+      @include flex;
+    }
+
+    &-box {
+      position: absolute;
+      margin-left: 100px;
+      bottom: 20px;
+      width: 140px;
+      background: #fff;
+      border-radius: 10px;
+      @include flex;
+      z-index: 11;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-top: 200px;
+    @include flex(start, center, column, 10px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 87%;
+      color: #d03427;
+    }
+  }
+
+  &__colors {
+    @include flex(center, start, row, 12px);
+    label {
+      &:nth-child(2) input {
+        background: #05486a;
+      }
+      &:nth-child(3) input {
+        background: #ff8a00;
+      }
+      &:nth-child(4) input {
+        background: #e16459;
+      }
+      input {
+        appearance: none;
+        min-height: 30px;
+        min-width: 30px;
+        border-radius: 50%;
+        background: #d9d9d9;
+        transition: 0.2s;
+        &:checked {
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px #d03427;
+          & + img {
+            display: block;
+          }
+        }
+      }
+      img {
+        position: absolute;
+        left: 0;
+        transform: translateY(-240px);
+        width: 260px;
+        height: 150px;
+        display: none;
+      }
+    }
+  }
+
+  &__price {
+    @include flex(center, start, row, 20px);
+    span {
+      del {
+        font-weight: 400;
+        font-size: 14px;
+        color: #666666;
+      }
+      h3 {
+        font-weight: 400;
+        font-size: 20px;
+        color: #05486a;
+      }
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    width: 180px;
+    height: 35px;
+    background: linear-gradient(180deg, #e16459 0%, #d03427 100%);
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 11px rgba(208, 52, 39, 0.5);
+    border-radius: 0px 0px 10px 10px;
+    font-size: 14px;
+    line-height: 130%;
+    color: #ffffff;
+    @include flex;
+  }
+
+  &__text {
+    margin-top: 50px;
+    @include flex(center, space-between, row, 20px);
+    h1 {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 87%;
+      color: #d03427;
+    }
+    p {
+      width: 60%;
+      font-size: 14px;
+      color: #666666;
+    }
+  }
+}

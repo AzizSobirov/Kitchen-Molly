@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./assets/css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper main__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="main__swiper-text">
+            <h1>
+              Корпусная мебель <br />
+              по индивидуальным проектам
+            </h1>
+            <h3>
+              от производитедя - это исключительное качество, надежность и
+              честная цена.
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ac
+              mattis scelerisque morbi nibh amet, eu cras purus. Nisi, amet
+              mauris pharetra scelerisque tincidunt consectetur. Interdum at
+              amet, elementum sapien, egestas massa sem. A cras diam lorem
+              facilisi.
+            </p>
+          </div>
+          <div class="main__swiper-action">
+            <h3>
+              При заказе кухни, <br />
+              скидка на всю технику
+            </h3>
+            <h2>10%</h2>
+            <span>
+              <img
+                class="main__swiper-prev"
+                src="./assets/img/icons/left.svg"
+                alt=""
+              />
+              <img
+                class="main__swiper-next"
+                src="./assets/img/icons/right.svg"
+                alt=""
+              />
+            </span>
+          </div>
+          <div class="main__swiper-img">
+            <img src="./assets/img/banner-1.png" alt="" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="main__swiper-text">
+            <h1>
+              Корпусная мебель <br />
+              по индивидуальным проектам
+            </h1>
+            <h3>
+              от производитедя - это исключительное качество, надежность и
+              честная цена.
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ac
+              mattis scelerisque morbi nibh amet, eu cras purus. Nisi, amet
+              mauris pharetra scelerisque tincidunt consectetur. Interdum at
+              amet, elementum sapien, egestas massa sem. A cras diam lorem
+              facilisi.
+            </p>
+          </div>
+          <div class="main__swiper-action">
+            <h3>
+              Скидка <br />
+              на следующую покупку
+            </h3>
+            <h2>5%</h2>
+            <span>
+              <img
+                class="main__swiper-prev"
+                src="./assets/img/icons/left.svg"
+                alt=""
+              />
+              <img
+                class="main__swiper-next"
+                src="./assets/img/icons/right.svg"
+                alt=""
+              />
+            </span>
+          </div>
+          <div class="main__swiper-img">
+            <img src="./assets/img/banner-2.png" alt="" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="main__swiper-text">
+            <h1>
+              Корпусная мебель <br />
+              по индивидуальным проектам
+            </h1>
+            <h3>
+              от производитедя - это исключительное качество, надежность и
+              честная цена.
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ac
+              mattis scelerisque morbi nibh amet, eu cras purus. Nisi, amet
+              mauris pharetra scelerisque tincidunt consectetur. Interdum at
+              amet, elementum sapien, egestas massa sem. A cras diam lorem
+              facilisi.
+            </p>
+          </div>
+          <div class="main__swiper-action">
+            <h3>
+              Не хватает денег? <br />
+              Дадим рассрочку
+            </h3>
+            <h2>0-0-6</h2>
+            <span>
+              <img
+                class="main__swiper-prev"
+                src="./assets/img/icons/left.svg"
+                alt=""
+              />
+              <img
+                class="main__swiper-next"
+                src="./assets/img/icons/right.svg"
+                alt=""
+              />
+            </span>
+          </div>
+          <div class="main__swiper-img">
+            <img src="./assets/img/banner-3.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="main-swiper-next">g</div>
+    <div class="main-swiper-prev">f</div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".main__swiper", {
+        navigation: {
+          nextEl: ".main__swiper-next",
+          prevEl: ".main__swiper-prev",
+        },
+        effect: "fade",
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <title>Menu</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <a href="/" class="nav__logo">
+        <img src="./assets/img/logo.svg" alt="" />
+        <h2>мебельная фабрика</h2>
+      </a>
+
+      <div class="nav__actions">
+        <div class="nav__action">
+          <div class="nav__figure">
+            <img src="./assets/img/icons/call.svg" alt="" />
+          </div>
+          <span>
+            <h3>+7 (495) 210-88-50</h3>
+            <a href="tel:+74952108850">Заказать звонок</a>
+          </span>
+        </div>
+        <div class="nav__action">
+          <div class="nav__figure">
+            <img src="./assets/img/icons/shop.svg" alt="" />
+          </div>
+          <span>
+            <h3>г.Москва</h3>
+            <a href="tel:+74952108850">Список салонов</a>
+          </span>
+        </div>
+        <div class="nav__action">
+          <div class="nav__figure">
+            <h5>Мы в соцсетях</h5>
+            <span>
+              <a href="#">
+                <img src="./assets/img/icons/telegram.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/img/icons/whatsapp.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/img/icons/vk.svg" alt="" />
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="nav__list">
+        <li class="nav__link">
+          <a href="/kitchen">Кухни</a>
+          <ol class="nav__content">
+            <li>
+              <a href="/kitchen">Стиль</a>
+              <div class="nav__item">
+                <a href="/kitchen/classic.html">Классика </a>
+                <a href="/kitchen/classic.html">Современный</a>
+                <a href="/kitchen/classic.html">Нео классика </a>
+                <a href="/kitchen/classic.html">Лофт</a>
+              </div>
+            </li>
+            <li>
+              <a href="#">Материал </a>
+              <div class="nav__item">
+                <a href="#">Классика </a>
+                <a href="#">Современный</a>
+                <a href="#">Нео классика </a>
+                <a href="#">Лофт</a>
+              </div>
+            </li>
+            <li>
+              <a href="#">Форма и размеры</a>
+              <div class="nav__item">
+                <a href="#">Классика </a>
+                <a href="#">Современный</a>
+                <a href="#">Нео классика </a>
+                <a href="#">Лофт</a>
+              </div>
+            </li>
+          </ol>
+        </li>
+
+        <li class="nav__link">
+          <a href="#">Мебель</a>
+          <ol class="nav__content">
+            <li>
+              <a href="#">Корпусная</a>
+            </li>
+            <li>
+              <a href="#">Из массива</a>
+            </li>
+            <li>
+              <a href="#">В ванную</a>
+            </li>
+          </ol>
+        </li>
+
+        <li class="nav__link">
+          <a href="#">Шкафы</a>
+          <ol class="nav__content">
+            <li>
+              <a href="#">Купэ</a>
+            </li>
+            <li>
+              <a href="#">Встраиваемые</a>
+            </li>
+            <li>
+              <a href="#">Распашные</a>
+            </li>
+          </ol>
+        </li>
+
+        <li class="nav__link">
+          <a href="/about.html">О нас</a>
+        </li>
+
+        <li class="nav__link">
+          <a href="/contact.html">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Popup -->
+    <article class="popup">
+      <div class="popup__bg" onclick="closeForm()"></div>
+
+      <div class="popup__content">
+        <img
+          src="./assets/img/icons/close.svg"
+          class="popup__close"
+          alt=""
+          onclick="closeForm()"
+        />
+
+        <form
+          class="popup__form"
+          onsubmit="event.preventDefault(); submitForm();"
+        >
+          <div class="popup__title">
+            оставьте свои данные <mark>мы перезвоним вам</mark>
+          </div>
+
+          <div class="popup__group">
+            <input type="text" minlength="3" placeholder="Имя" required />
+            <input
+              type="number"
+              minlength="9"
+              placeholder="Номер телефона"
+              required
+            />
+          </div>
+
+          <textarea
+            class="popup__textarea"
+            placeholder="Комментарий"
+          ></textarea>
+
+          <button class="popup__btn">
+            Отправить
+          </button>
+        </form>
+
+        <div class="popup__subtitle">
+          <img src="./assets/img/icons/success.svg" alt="" />
+          <h2>Спасибо!</h2>
+          <h3>Заявка принята</h3>
+        </div>
+      </div>
+    </article>
+
+    <!-- Swiper Banner -->
+    <header class="swiper main__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="main__swiper-text">
+            <h1>
+              Корпусная мебель <br />
+              по индивидуальным проектам
+            </h1>
+            <h3>
+              от производитедя - это исключительное качество, надежность и
+              честная цена.
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ac
+              mattis scelerisque morbi nibh amet, eu cras purus. Nisi, amet
+              mauris pharetra scelerisque tincidunt consectetur. Interdum at
+              amet, elementum sapien, egestas massa sem. A cras diam lorem
+              facilisi.
+            </p>
+          </div>
+          <div class="main__swiper-action">
+            <h3>
+              При заказе кухни, <br />
+              скидка на всю технику
+            </h3>
+            <h2>10%</h2>
+            <span>
+              <img
+                class="main__swiper-prev"
+                src="./assets/img/icons/left.svg"
+                alt=""
+              />
+              <img
+                class="main__swiper-next"
+                src="./assets/img/icons/right.svg"
+                alt=""
+              />
+            </span>
+          </div>
+          <div class="main__swiper-img">
+            <img src="./assets/img/main/banner-1.png" alt="" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="main__swiper-text">
+            <h1>
+              Корпусная мебель <br />
+              по индивидуальным проектам
+            </h1>
+            <h3>
+              от производитедя - это исключительное качество, надежность и
+              честная цена.
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ac
+              mattis scelerisque morbi nibh amet, eu cras purus. Nisi, amet
+              mauris pharetra scelerisque tincidunt consectetur. Interdum at
+              amet, elementum sapien, egestas massa sem. A cras diam lorem
+              facilisi.
+            </p>
+          </div>
+          <div class="main__swiper-action">
+            <h3>
+              Скидка <br />
+              на следующую покупку
+            </h3>
+            <h2>5%</h2>
+            <span>
+              <img
+                class="main__swiper-prev"
+                src="./assets/img/icons/left.svg"
+                alt=""
+              />
+              <img
+                class="main__swiper-next"
+                src="./assets/img/icons/right.svg"
+                alt=""
+              />
+            </span>
+          </div>
+          <div class="main__swiper-img">
+            <img src="./assets/img/main/banner-2.png" alt="" />
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="main__swiper-text">
+            <h1>
+              Корпусная мебель <br />
+              по индивидуальным проектам
+            </h1>
+            <h3>
+              от производитедя - это исключительное качество, надежность и
+              честная цена.
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ac
+              mattis scelerisque morbi nibh amet, eu cras purus. Nisi, amet
+              mauris pharetra scelerisque tincidunt consectetur. Interdum at
+              amet, elementum sapien, egestas massa sem. A cras diam lorem
+              facilisi.
+            </p>
+          </div>
+          <div class="main__swiper-action">
+            <h3>
+              Не хватает денег? <br />
+              Дадим рассрочку
+            </h3>
+            <h2>0-0-6</h2>
+            <span>
+              <img
+                class="main__swiper-prev"
+                src="./assets/img/icons/left.svg"
+                alt=""
+              />
+              <img
+                class="main__swiper-next"
+                src="./assets/img/icons/right.svg"
+                alt=""
+              />
+            </span>
+          </div>
+          <div class="main__swiper-img">
+            <img src="./assets/img/main/banner-3.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Advantages -->
+    <section class="advantages">
+      <div class="advantages__img">
+        <img src="./assets/img/main/advantages.png" alt="" />
+      </div>
+      <div class="advantages__text">
+        <h2>
+          Почувствуйте на себе <br /><mark
+            >преимущества персонального заказа</mark
+          >
+        </h2>
+        <span>
+          <p>
+            <b>Нестандартные габариты</b> - используйте максимально эргономично
+            ваше пространство. Создавайте целостный эстетический ансамбль
+            благодаря точной подгонке
+          </p>
+          <p>
+            <b>Разнообразие</b> - откажитесь от типовых решений и ограниченных
+            цветов. Вместе с Molly Home вы можете воплоить дизайнерский интерьер
+            по доступным ценам.
+          </p>
+          <p>
+            <b> Наполнение по личным вкусам</b> - расположение элементов,
+            количество ящиков, высота полок - все это будет сделано
+            исключительно из ваших предпочтений для максимального удобства
+            повседневной жизни.
+          </p>
+        </span>
+      </div>
+    </section>
+
+    <!-- We Produce -->
+    <section class="produce">
+      <h2>мы производим</h2>
+      <div class="produce__content"></div>
+    </section>
+
+    <!-- Quality -->
+    <section class="quality">
+      <div class="quality__text">
+        <h2>Нашему качеству <mark>доверяют</mark></h2>
+        <p>
+          Мы являемся главным партнером передачи "Большие перемены" <br />
+          <b>на телеканале “Россия 1”</b>
+        </p>
+      </div>
+
+      <div class="quality__content">
+        <div class="quality__item">
+          <span>
+            <img
+              src="./assets/img/icons/play.svg"
+              alt=""
+              onclick="playVideo(1)"
+            />
+            <h2>Мы в эфире</h2>
+          </span>
+          <iframe
+            id="iframe-1"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/wafGGDX0mK4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="quality__item">
+          <span>
+            <img
+              src="./assets/img/icons/play.svg"
+              onclick="playVideo(2)"
+              alt=""
+            />
+            <h2>Мы в эфире</h2>
+          </span>
+          <iframe
+            id="iframe-2"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/wafGGDX0mK4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <div class="services__text">
+        <h2>чем мы <mark>лучше других команий?</mark></h2>
+      </div>
+      <div class="container">
+        <div class="services__content">
+          <div class="services__card">
+            <div class="services__figure">
+              <h2>НАША КОМПАНИЯ</h2>
+            </div>
+            <div class="services__item">
+              <span>
+                <p>
+                  Цена 1 п.м.
+                </p>
+                <h3>от 8 800 ₽</h3>
+              </span>
+              <span>
+                <p>Внимание к клиентам</p>
+                <i>
+                  <img src="./assets/img/icons/human.svg" alt="" />
+                </i>
+              </span>
+              <span>
+                <p>Качество</p>
+                <h3>5/5</h3>
+              </span>
+              <span>
+                <p>Экономия</p>
+                <h3>до 70%</h3>
+              </span>
+            </div>
+            <div class="services__btn" onclick="orderService()">
+              Заказывайте выгодно!
+            </div>
+          </div>
+
+          <div class="services__card">
+            <div class="services__figure">
+              <h2>готовая мебель</h2>
+            </div>
+            <div class="services__item">
+              <span>
+                <p>
+                  Цена 1 п.м.
+                </p>
+                <h3>от 10 800 ₽</h3>
+              </span>
+              <span>
+                <p>Внимание к клиентам</p>
+                <i>
+                  <img src="./assets/img/icons/human.svg" alt="" />
+                  <img src="./assets/img/icons/human.svg" alt="" />
+                  <img src="./assets/img/icons/human.svg" alt="" />
+                  <img src="./assets/img/icons/human.svg" alt="" />
+                </i>
+              </span>
+              <span>
+                <p>Качество</p>
+                <h3>2/5</h3>
+              </span>
+              <span>
+                <p>Экономия</p>
+                <h3>до 47%</h3>
+              </span>
+            </div>
+            <div class="services__btn" onclick="orderService()">
+              Заказывайте выгодно!
+            </div>
+          </div>
+
+          <div class="services__card">
+            <div class="services__figure">
+              <h2>Крупные бренды</h2>
+            </div>
+            <div class="services__item">
+              <span>
+                <p>
+                  Цена 1 п.м.
+                </p>
+                <h3>от 17 500 ₽</h3>
+              </span>
+              <span>
+                <p>Внимание к клиентам</p>
+                <i>
+                  <img src="./assets/img/icons/human.svg" alt="" />
+                  <img src="./assets/img/icons/human.svg" alt="" />
+                </i>
+              </span>
+              <span>
+                <p>Качество</p>
+                <h3>4/5</h3>
+              </span>
+              <span>
+                <p>Экономия</p>
+                <h3>до 15%</h3>
+              </span>
+            </div>
+            <div class="services__btn" onclick="orderService()">
+              Заказывайте выгодно!
+            </div>
+          </div>
+
+          <div class="services__card">
+            <div class="services__figure">
+              <h2>салоны мебели</h2>
+            </div>
+            <div class="services__item">
+              <span>
+                <p>
+                  Цена 1 п.м.
+                </p>
+                <h3>от 24 300 ₽</h3>
+              </span>
+              <span>
+                <p>Внимание к клиентам</p>
+                <i>
+                  <img src="./assets/img/icons/human.svg" alt="" />
+                  <img src="./assets/img/icons/human.svg" alt="" />
+                  <img src="./assets/img/icons/human.svg" alt="" />
+                </i>
+              </span>
+              <span>
+                <p>Качество</p>
+                <h3>3/5</h3>
+              </span>
+              <span>
+                <p>Экономия</p>
+                <h3>0%</h3>
+              </span>
+            </div>
+            <div class="services__btn" onclick="orderService()">
+              Заказывайте выгодно!
+            </div>
+          </div>
+        </div>
+        <div class="services__img">
+          <img src="./assets/img/main/services.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+      <div class="projects__text">
+        <h2>реализованние <mark>проекты</mark></h2>
+      </div>
+      <div class="projects__list"></div>
+    </section>
+
+    <!-- Production -->
+    <section class="production">
+      <div class="production__text">
+        <h2><mark>производство</mark></h2>
+      </div>
+
+      <div class="production__content">
+        <div class="production__item">
+          <span>
+            <img src="./assets/img/icons/play.svg" alt="" />
+            <h2>Кухни на заказ</h2>
+          </span>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/j9xKYZz_9QU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p>
+          Наше прозводство обладает самым современным оборудованием и
+          исполльзует новейшие технологии благодаря которым мы можем предлагать
+          вам высочайшее качество по доступным ценам
+        </p>
+      </div>
+    </section>
+
+    <!-- Questions & Answers -->
+    <section class="questions">
+      <div class="questions__text">
+        <h2>ответы <mark>на важные вопросы</mark></h2>
+      </div>
+      <div class="container">
+        <div class="questions__list"></div>
+        <div class="questions__video">
+          <img
+            style="transform: rotate(90deg);"
+            src="./assets/img/icons/play.svg"
+            alt=""
+            onclick="playAnswer()"
+          />
+          <img
+            src="./assets/img/icons/pause.svg"
+            alt=""
+            onclick="pauseAnswer()"
+          />
+          <video
+            src="https://api.renderforest.com/api/v1/projects/63707067/download?key=c989db4f337dfeaed42e6e329041af2e:207a09da6ed4619886859b53f5c7a8be4b1a4120b3e280ee5d94aabbd56d8090ce15bbfc2859f4e3359568f298e2f9cf"
+          ></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO header -->
+    <section class="seo">
+      <div class="seo__text">
+        <h2><mark>СЕО заголовок</mark></h2>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa et velit
+        sit ipsum quis nullam. Tortor sagittis facilisis dictum duis purus est.
+        Venenatis auctor rhoncus dictum vitae justo in sem orci. Eget at sit
+        facilisi purus. Eu lobortis sed vel, netus consequat, etiam turpis
+        auctor. At eu nisl eleifend iaculis vestibulum tempor. Accumsan, ac quis
+        arcu viverra accumsan neque ut. Et tellus nunc amet, magna. Ridiculus
+        laoreet et diam at in lectus lobortis lectus. Hac ac mattis semper ac
+        tincidunt id nibh sed facilisis. Eu mauris orci sodales quam. Elementum
+        dictum elit laoreet mattis orci.
+      </p>
+      <div class="seo__btn">Показать ещё</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <ul>
+        <li>
+          <a href="/" class="nav__logo">
+            <img src="./assets/img/logo-white.svg" alt="" />
+            <h2>мебельная фабрика</h2>
+          </a>
+          <div class="footer__social">
+            <h5>Мы в соцсетях</h5>
+            <span>
+              <a href="#">
+                <img src="./assets/img/icons/tg-white.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/img/icons/wht-white.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/img/icons/vk-white.svg" alt="" />
+              </a>
+            </span>
+          </div>
+        </li>
+        <li>
+          <h3>КУХНИ</h3>
+          <a href="#">Классика</a>
+          <a href="#">Современный</a>
+          <a href="#">Нео классика</a>
+          <a href="#">Лофт</a>
+          <a href="#">МДФ Эмаль</a>
+          <a href="#">Глянец</a>
+          <a href="#">Матовый</a>
+          <a href="#">Шпон</a>
+          <a href="#">Массив</a>
+          <a href="#">Акрил</a>
+        </li>
+        <li>
+          <h3>КУХНИ</h3>
+          <a href="#">Пластик</a>
+          <a href="#">ЛДСП</a>
+          <a href="#">Плиты TSS Smart</a>
+          <a href="#">Большая кухня</a>
+          <a href="#">Маленькая кухня</a>
+          <a href="#">Кухня без ручек</a>
+          <a href="#">Кухня с барной стойкой</a>
+          <a href="#">П образная кухня</a>
+          <a href="#">Прямая кухня</a>
+          <a href="#">Угловая</a>
+        </li>
+        <li>
+          <h3>МЕБЕЛЬ</h3>
+          <a href="#">Корпусная</a>
+          <a href="#">Из массива</a>
+          <a href="#">В ванную</a>
+          <br /><br />
+          <h3>ШКАФЫ</h3>
+          <a href="#">Купэ</a>
+          <a href="#">Встраиваемые</a>
+          <a href="#">Распашные</a>
+        </li>
+        <li>
+          <h4>
+            г. Москва, <br />
+            ул. Самуила Маршака, 22 <br /><br />
+            г. Москва, <br />
+            ул. Рождественская, 32 <br /><br />
+            +7 (495) 210-88-50 <br /><br />
+            info@mail.ru
+          </h4>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // swiper
+      var swiper = new Swiper(".main__swiper", {
+        navigation: {
+          nextEl: ".main__swiper-next",
+          prevEl: ".main__swiper-prev",
+        },
+        effect: "fade",
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+
+      // produce
+      let produce__items = [
+        "Кухни",
+        "Шкафы",
+        "Шкафы-купе",
+        "Прихожие",
+        "Гостиные",
+        "Мебель для ванной",
+        "Мебель для спальни",
+        "Гардеробные",
+        "Мебель в детскую",
+      ];
+
+      for (let i = 0; i < produce__items.length; i++) {
+        let el = document.querySelector(".produce__content");
+        el.innerHTML += `
+        <div class="produce__item">
+          <p>${produce__items[i]}</p>
+          <img src="./assets/img/main/produce-${i + 1}.png" alt="" />
+        </div> `;
+      }
+
+      // projects
+
+      for (let p = 0; p < 8; p++) {
+        let el = document.querySelector(".projects__list");
+        el.innerHTML += `<div class="projects__item"
+            style="background: url(./assets/img/main/project.png) center/cover;">
+          <span>
+            <p>Угловая кухня “Almato”</p>
+            <h3>123 250 ₽</h3>
+          </span>
+        </div>`;
+      }
+
+      // Questions
+      let questions = [
+        {
+          text: "Почему ваша мебель стоит дешевле чем у конкурентов?",
+          url:
+            "https://api.renderforest.com/api/v1/projects/63707067/download?key=c989db4f337dfeaed42e6e329041af2e:207a09da6ed4619886859b53f5c7a8be4b1a4120b3e280ee5d94aabbd56d8090ce15bbfc2859f4e3359568f298e2f9cf",
+        },
+        {
+          text: "Почему ваша мебель стоит дешевле чем у конкурентов?",
+          url:
+            "https://api.renderforest.com/api/v1/projects/63707067/download?key=c989db4f337dfeaed42e6e329041af2e:207a09da6ed4619886859b53f5c7a8be4b1a4120b3e280ee5d94aabbd56d8090ce15bbfc2859f4e3359568f298e2f9cf",
+        },
+        {
+          text: "Почему ваша мебель стоит дешевле чем у конкурентов?",
+          url:
+            "https://api.renderforest.com/api/v1/projects/63707067/download?key=c989db4f337dfeaed42e6e329041af2e:207a09da6ed4619886859b53f5c7a8be4b1a4120b3e280ee5d94aabbd56d8090ce15bbfc2859f4e3359568f298e2f9cf",
+        },
+        {
+          text: "Почему ваша мебель стоит дешевле чем у конкурентов?",
+          url:
+            "https://api.renderforest.com/api/v1/projects/63707067/download?key=c989db4f337dfeaed42e6e329041af2e:207a09da6ed4619886859b53f5c7a8be4b1a4120b3e280ee5d94aabbd56d8090ce15bbfc2859f4e3359568f298e2f9cf",
+        },
+        {
+          text: "Почему ваша мебель стоит дешевле чем у конкурентов?",
+          url:
+            "https://api.renderforest.com/api/v1/projects/63707067/download?key=c989db4f337dfeaed42e6e329041af2e:207a09da6ed4619886859b53f5c7a8be4b1a4120b3e280ee5d94aabbd56d8090ce15bbfc2859f4e3359568f298e2f9cf",
+        },
+        {
+          text: "Почему ваша мебель стоит дешевле чем у конкурентов?",
+          url:
+            "https://api.renderforest.com/api/v1/projects/63707067/download?key=c989db4f337dfeaed42e6e329041af2e:207a09da6ed4619886859b53f5c7a8be4b1a4120b3e280ee5d94aabbd56d8090ce15bbfc2859f4e3359568f298e2f9cf",
+        },
+      ];
+
+      for (let i = 0; i < questions.length; i++) {
+        let el = document.querySelector(".questions__list");
+        el.innerHTML += `
+        <div class="questions__item" onclick='loadAnswer(${i})'>
+          <span>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1814_87)">
+<path d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z" fill="#05486A"/>
+</g>
+<defs>
+<clipPath id="clip0_1814_87">
+<rect width="32" height="32" fill="white" />
+</clipPath>
+</defs>
+</svg>
+
+          </span>
+          <p>${questions[i].text}</p>
+        </div> `;
+      }
+
+      document.querySelector(".questions__list").innerHTML += `
+      <div class="questions__btn">
+        Задать вопрос
+      </div>
+      `;
+
+      let url = questions[0].url;
+      let answerVideo = document.querySelector(".questions__video video");
+      answerVideo.setAttribute("src", url);
+
+      function loadAnswer(idx) {
+        let btn = document.querySelectorAll(".questions__video img");
+        btn[0].style.display = "none";
+        btn[1].style.display = "block";
+        url = questions[idx].url;
+        answerVideo.setAttribute("src", url);
+        answerVideo.play();
+      }
+
+      function playAnswer() {
+        let btn = document.querySelectorAll(".questions__video img");
+
+        btn[0].style.display = "none";
+        btn[1].style.display = "block";
+        answerVideo.play();
+      }
+
+      function pauseAnswer() {
+        let btn = document.querySelectorAll(".questions__video img");
+
+        btn[1].style.display = "none";
+        btn[0].style.display = "block";
+        answerVideo.pause();
+      }
+
+      // popup
+      let popup = document.querySelector(".popup");
+      let popupForm = document.querySelector(".popup__form");
+      let popupSub = document.querySelector(".popup__subtitle");
+
+      function submitForm() {
+        popupForm.style.display = "none";
+        popupSub.style.display = "flex";
+        setTimeout(() => {
+          popupSub.style.display = "none";
+          popupForm.style.display = "flex";
+          closeForm();
+        }, 3000);
+      }
+
+      function closeForm() {
+        popup.style.display = "none";
+      }
+
+      function orderService() {
+        popup.style.display = "flex";
+      }
+    </script>
+  </body>
+</html>

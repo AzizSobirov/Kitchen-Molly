@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/kitchen.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <title>Kitchen</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <a href="/" class="nav__logo">
+        <img src="./assets/img/logo.svg" alt="" />
+        <h2>мебельная фабрика</h2>
+      </a>
+
+      <div class="nav__actions">
+        <div class="nav__action">
+          <div class="nav__figure">
+            <img src="./assets/img/icons/call.svg" alt="" />
+          </div>
+          <span>
+            <h3>+7 (495) 210-88-50</h3>
+            <a href="tel:+74952108850">Заказать звонок</a>
+          </span>
+        </div>
+        <div class="nav__action">
+          <div class="nav__figure">
+            <img src="./assets/img/icons/shop.svg" alt="" />
+          </div>
+          <span>
+            <h3>г.Москва</h3>
+            <a href="tel:+74952108850">Список салонов</a>
+          </span>
+        </div>
+        <div class="nav__action">
+          <div class="nav__figure">
+            <h5>Мы в соцсетях</h5>
+            <span>
+              <a href="#">
+                <img src="./assets/img/icons/telegram.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/img/icons/whatsapp.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/img/icons/vk.svg" alt="" />
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="nav__list">
+        <li class="nav__link">
+          <a href="#">Кухни</a>
+          <ol class="nav__content">
+            <li>
+              <a href="#">Стиль</a>
+              <div class="nav__item">
+                <a href="#">Классика </a>
+                <a href="#">Современный</a>
+                <a href="#">Нео классика </a>
+                <a href="#">Лофт</a>
+              </div>
+            </li>
+            <li>
+              <a href="#">Материал </a>
+              <div class="nav__item">
+                <a href="#">Классика </a>
+                <a href="#">Современный</a>
+                <a href="#">Нео классика </a>
+                <a href="#">Лофт</a>
+              </div>
+            </li>
+            <li>
+              <a href="#">Форма и размеры</a>
+              <div class="nav__item">
+                <a href="#">Классика </a>
+                <a href="#">Современный</a>
+                <a href="#">Нео классика </a>
+                <a href="#">Лофт</a>
+              </div>
+            </li>
+          </ol>
+        </li>
+
+        <li class="nav__link">
+          <a href="#">Мебель</a>
+          <ol class="nav__content">
+            <li>
+              <a href="#">Корпусная</a>
+            </li>
+            <li>
+              <a href="#">Из массива</a>
+            </li>
+            <li>
+              <a href="#">В ванную</a>
+            </li>
+          </ol>
+        </li>
+
+        <li class="nav__link">
+          <a href="#">Шкафы</a>
+          <ol class="nav__content">
+            <li>
+              <a href="#">Купэ</a>
+            </li>
+            <li>
+              <a href="#">Встраиваемые</a>
+            </li>
+            <li>
+              <a href="#">Распашные</a>
+            </li>
+          </ol>
+        </li>
+
+        <li class="nav__link">
+          <a href="/about.html">О нас</a>
+        </li>
+
+        <li class="nav__link">
+          <a href="/contact.html">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <h2>кухня GLOSS</h2>
+          <div class="header__colors">
+            <label for="color1">
+              <input type="radio" name="color" id="color1" checked />
+              <img src="./assets/img/kitchen/color-1.png" alt="" />
+            </label>
+            <label for="color2">
+              <input type="radio" name="color" id="color2" />
+              <img src="./assets/img/kitchen/color-2.png" alt="" />
+            </label>
+            <label for="color3">
+              <input type="radio" name="color" id="color3" />
+              <img src="./assets/img/kitchen/color-3.png" alt="" />
+            </label>
+            <label for="color4">
+              <input type="radio" name="color" id="color4" />
+              <img src="./assets/img/kitchen/color-4.png" alt="" />
+            </label>
+            <h4>+ 200 цветов</h4>
+          </div>
+          <div class="header__price">
+            <span>
+              <del>98 000 ₽</del>
+              <h3>43 000 ₽</h3>
+            </span>
+            <div class="header__btn">
+              Узнать больше
+            </div>
+          </div>
+        </div>
+
+        <div class="header__swiper">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/img/kitchen/banner-1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/img/kitchen/banner-1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/img/kitchen/banner-1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/img/kitchen/banner-1.png" alt="" />
+              </div>
+            </div>
+
+            <div class="header__swiper-box">
+              <img
+                class="header__swiper-prev"
+                src="./assets/img/icons/left.svg"
+                alt=""
+              />
+              <div class="swiper-pagination"></div>
+              <img
+                class="header__swiper-next"
+                src="./assets/img/icons/right.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__text">
+        <h1>
+          кухни под ключ <br />
+          по индивидуальным проектам
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum a
+          condimentum a sed tellus, mattis ac est mi. Scelerisque dui vel sed et
+          venenatis, nunc. Congue pretium suspendisse suscipit nullam amet
+          nullam. Viverra blandit suspendisse felis, ac. Cras eu tincidunt proin
+          cursus mattis massa orci urna faucibus. Etiam scelerisque consequat,
+          tellus tortor vestibulum vestibulum est molestie. Netus praesent erat
+          id justo cras ut bibendum pharetra. Augue suspendisse nibh turpis
+          lacus.
+        </p>
+      </div>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".header__swiper-next",
+          prevEl: ".header__swiper-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>
