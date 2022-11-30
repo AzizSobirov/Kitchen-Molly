@@ -177,6 +177,7 @@ ol {
     @media screen and (max-width: 1024px) {
       padding: 20px;
       left: 0;
+      min-width: 100vw;
       transform: translateX(0);
       min-height: calc(100vh - 80px);
       background: #fff;
