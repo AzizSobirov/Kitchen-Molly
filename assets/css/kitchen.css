@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-@import url("https://fonts.cdnfonts.com/css/bebas-neue");
+@import "../fonts/bebasneue.css";
 * {
   margin: 0;
   padding: 0;
@@ -509,11 +509,6 @@ ol {
   font-weight: 400;
   font-size: 24px;
   color: #05486a;
-}
-
-.nav a.active {
-  color: #d03427;
-  font-weight: 500;
 }
 
 .header {

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 // family=Bebas+Neue&
-@import url("https://fonts.cdnfonts.com/css/bebas-neue");
+@import "../fonts/bebasneue.css";
 
 @mixin flex($a: center, $j: center, $f: row, $g: 0px) {
   display: flex;
