@@ -38,13 +38,22 @@ ol {
   @include flex(start, space-between, row);
   box-shadow: 4px 4px 19px rgba(0, 0, 0, 0.15);
   z-index: 3;
+  @media screen and (max-width: 576px) {
+    height: 60px;
+  }
 
   //?   Logo
   &__logo {
     padding: 5px 0;
     @include flex(center, start, row, 20px);
+    @media screen and (max-width: 576px) {
+      gap: 5px;
+    }
     img {
       width: 72px;
+      @media screen and (max-width: 576px) {
+        height: 50px;
+      }
     }
     h2 {
       width: 90px;
@@ -61,6 +70,10 @@ ol {
   &__actions {
     padding: 0 0 15px;
     @include flex(start, end, row, 20px);
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
   }
 
   &__action {
@@ -132,6 +145,23 @@ ol {
     }
   }
 
+  &__bar {
+    height: 100%;
+    display: none;
+    @media screen and (max-width: 1024px) {
+      @include flex;
+      img {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
   //? List
   &__list {
     position: fixed;
@@ -143,11 +173,31 @@ ol {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     z-index: 3;
+
+    @media screen and (max-width: 1024px) {
+      padding: 20px;
+      left: 0;
+      transform: translateX(0);
+      min-height: calc(100vh - 80px);
+      background: #fff;
+      @include flex(start, start, column, 20px);
+      box-shadow: inset 0 1.5px 5px #25252570;
+      display: none;
+    }
+    @media screen and (max-width: 576px) {
+      top: 60px;
+      min-height: calc(100vh - 60px);
+    }
   }
 
   &__link {
     height: 100%;
     @include flex(center, center);
+    @media screen and (max-width: 1024px) {
+      position: relative;
+      height: auto;
+      @include flex(start, start, column, 10px);
+    }
     &:nth-child(1) {
       .nav__content {
         transform: translateX(32px);
@@ -165,6 +215,12 @@ ol {
         display: flex;
         z-index: -1;
       }
+      @media screen and (max-width: 1024px) {
+        .nav__content {
+          transform: translateX(0);
+          z-index: 2;
+        }
+      }
     }
 
     .link {
@@ -179,6 +235,11 @@ ol {
       @include flex;
       z-index: 3;
       transition: 0.2s;
+
+      @media screen and (max-width: 1024px) {
+        background: transparent;
+        @include flex(center, start);
+      }
 
       &:hover {
         color: #d03427;
@@ -203,12 +264,29 @@ ol {
     @include flex(start, start, column);
     z-index: 2;
     display: none;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0;
+      position: static;
+      height: auto;
+      width: auto;
+      background: transparent;
+      box-shadow: none;
+      top: 0;
+    }
+
     li {
       padding: 0 20px;
       width: 100%;
       height: 35px;
       @include flex(center, start, row, 12px);
       cursor: pointer;
+
+      @media screen and (max-width: 1024px) {
+        padding: 0;
+        padding-left: 20px;
+        @include flex(center, start, row, 12px);
+      }
 
       &::before {
         position: absolute;
@@ -270,6 +348,9 @@ ol {
     @include flex(start, start, column);
     z-index: 1;
     display: none;
+    @media screen and (max-width: 1024px) {
+      display: none !important;
+    }
 
     a {
       color: #000 !important;
@@ -317,6 +398,22 @@ ol {
   }
 }
 
+.nav.active {
+  .nav__bar {
+    img {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+  .nav__list {
+    display: flex;
+  }
+}
+
 .nav a.active {
   color: #d03427;
   font-weight: 500;
@@ -326,8 +423,12 @@ ol {
   padding: 35px 5vw;
   background: #05486a;
   @include flex;
+
   &__social {
     margin-top: 60px;
+    @media screen and (max-width: 1024px) {
+      margin-top: 0;
+    }
     h5 {
       font-weight: 400;
       font-size: 12px;
@@ -350,9 +451,20 @@ ol {
     height: 100%;
     width: 100%;
     @include flex(start, space-between, row, 40px);
+    @media screen and (max-width: 1024px) {
+      padding: 20px;
+      flex-wrap: wrap;
+    }
     li {
       height: 100%;
       @include flex(start, start, column, 5px);
+      @media screen and (max-width: 1024px) {
+        &:first-child {
+          width: 100%;
+          @include flex(center, space-between);
+        }
+      }
+
       &:last-child {
         padding-left: 20px;
         box-shadow: -2px 0 0 #d03427;
@@ -386,6 +498,7 @@ ol {
 
   &__bg {
     position: fixed;
+    padding: 0 5vw;
     top: 0;
     left: 0;
     min-height: 100vh;
@@ -413,6 +526,11 @@ ol {
     box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.25);
     z-index: 4;
 
+    @media screen and (max-width: 1024px) {
+      width: 80vw;
+      @include flex;
+    }
+
     &::after {
       position: absolute;
       content: "";
@@ -422,6 +540,10 @@ ol {
       width: 700px;
       border-radius: 0 65px 0 65px;
       background: url(../img/popup.png) center/cover;
+      @media screen and (max-width: 1024px) {
+        width: 80vw;
+        opacity: 0.5;
+      }
     }
   }
 
@@ -431,6 +553,12 @@ ol {
     width: 380px;
     @include flex(start, center, column, 15px);
     z-index: 5;
+    @media screen and (max-width: 1024px) {
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      @include flex(center, center, column, 15px);
+    }
   }
 
   &__title {
@@ -441,6 +569,9 @@ ol {
     font-size: 22px;
     line-height: 130%;
     color: #d03427;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
     mark {
       color: #05486a;
       font-family: "Bebas Neue";
@@ -450,6 +581,10 @@ ol {
 
   &__group {
     @include flex(center, start, row, 20px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      flex-direction: column;
+    }
     input {
       padding: 8px 10px;
       width: 180px;
@@ -457,6 +592,9 @@ ol {
       border: 1px solid #bbbbbb;
       box-shadow: 0px 4px 7px rgba(102, 102, 102, 0.2);
       border-radius: 10px;
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
     }
   }
 
@@ -468,6 +606,9 @@ ol {
     border: 1px solid #bbbbbb;
     box-shadow: 0px 4px 7px rgba(102, 102, 102, 0.2);
     border-radius: 10px;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
   }
 
   &__btn {

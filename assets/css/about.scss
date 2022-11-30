@@ -1,13 +1,17 @@
 @import "icode";
 
 .about {
+  padding: 50px 5vw;
   .container {
-    padding: 65px 5vw;
     margin-top: 100px;
     @include flex(center, center, row, 20px);
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
   }
 
   &__text {
+    width: 100%;
     @include flex(start, center, column, 15px);
     h2 {
       font-family: "Bebas Neue";
@@ -22,6 +26,11 @@
       line-height: 130%;
     }
   }
+
+  img {
+    width: 55vw;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+  }
 }
-
-

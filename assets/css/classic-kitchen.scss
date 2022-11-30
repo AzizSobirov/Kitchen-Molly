@@ -7,6 +7,9 @@
   &__content {
     width: 45%;
     @include flex(start, center, column, 10px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
     h1 {
       font-family: "Bebas Neue";
       font-weight: 400;
@@ -53,6 +56,9 @@
 
   &__img {
     width: 55%;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
     img {
       width: 100%;
     }
@@ -86,8 +92,14 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 280px);
+    grid-template-rows: repeat(1, 280px);
     gap: 20px;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 180px);
+
+      gap: 7px;
+    }
   }
 
   &__item {
@@ -115,6 +127,9 @@
       p {
         padding-left: 70px;
         position: relative;
+        @media screen and (max-width: 1024px) {
+          padding-left: 30px;
+        }
         &::before {
           position: absolute;
           top: 8px;
@@ -124,6 +139,9 @@
           height: 2.5px;
           background: #d03427;
           transition: 0.2s;
+          @media screen and (max-width: 1024px) {
+            width: 15px;
+          }
         }
 
         &::after {
@@ -136,11 +154,17 @@
           background: #d03427;
           border-radius: 50%;
           transition: 0.2s;
+          @media screen and (max-width: 1024px) {
+            left: 15px;
+          }
         }
       }
       b {
         padding-left: 70px;
         @include flex(start, center, row, 20px);
+        @media screen and (max-width: 1024px) {
+          padding-left: 5px;
+        }
         h5 {
           font-weight: 400;
           font-size: 12px;
@@ -162,6 +186,9 @@
         font-size: 14px;
         line-height: 130%;
         color: #ffffff;
+        @media screen and (max-width: 1024px) {
+          width: 80%;
+        }
       }
     }
   }
@@ -170,9 +197,15 @@
 .form {
   padding: 50px 5vw;
   @include flex(start, center, row, 40px);
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
   &__text {
     width: 35%;
     @include flex(start, start, column, 20px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
 
     h2 {
       font-family: "Bebas Neue";
@@ -220,16 +253,24 @@
   }
 
   &__content {
+    max-height: 310px;
     padding: 35px 0 0;
     width: 65%;
     background: #05486a;
     border-radius: 0px 65px;
     @include flex(end, space-between, row, 0px);
+    @media screen and (max-width: 1024px) {
+      padding: 20px;
+      width: 100%;
+    }
 
     &-text {
       padding: 0 0 55px 35px;
       width: 100%;
       @include flex(stretch, center, column, 5px);
+      @media screen and (max-width: 1024px) {
+        padding: 0 0 20px;
+      }
       h2 {
         font-family: "Bebas Neue";
         font-weight: 400;
@@ -266,10 +307,13 @@
 
     img {
       width: 65%;
-      transform: translateX(35px);
+      // transform: translateX(35px);
       @media screen and (max-width: 1200px) {
         width: 55%;
-        transform: translateX(25px);
+        // transform: translateX(25px);
+      }
+      @media screen and (max-width: 758px) {
+        display: none;
       }
     }
   }
@@ -277,6 +321,8 @@
 
 .quality {
   padding: 50px 5vw 150px;
+  max-width: 100vw;
+  overflow: hidden;
   @include flex(start, start, column, 40px);
 
   &__text {
@@ -331,6 +377,10 @@
     position: relative;
     width: 100%;
     @include flex(center, center, row, 40px);
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 20px;
+    }
     &::before {
       position: absolute;
       content: "";
@@ -365,8 +415,24 @@
       transform: translateY(120px);
     }
 
+    @media screen and (max-width: 1024px) {
+      padding: 10px;
+      width: 100%;
+      flex-direction: column;
+      &:last-child {
+        transform: translateY(0);
+      }
+    }
+
     span {
       @include flex(end, end, column-reverse, 10px);
+      @media screen and (max-width: 1024px) {
+        flex-direction: row;
+        img {
+          width: 24px;
+          transform: rotate(90deg);
+        }
+      }
 
       h2 {
         font-family: "Bebas Neue";
@@ -377,6 +443,11 @@
 
         writing-mode: vertical-rl;
         transform: rotate(180deg);
+        @media screen and (max-width: 1024px) {
+          font-size: 20px;
+          transform: rotate(0);
+          writing-mode: unset;
+        }
       }
     }
 
@@ -415,16 +486,34 @@
 
   .container {
     @include flex(start, center, row, 40px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
   }
 
   .services__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 20px;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
   }
 
   .services__img {
     width: 60%;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
     img {
       width: 100%;
     }
@@ -435,9 +524,9 @@
     position: relative;
     @include flex(start, start, column, 10px);
     border-radius: 0px 0px 10px 10px;
-
     transition: 0.2s;
-    &.active  {
+    &.active {
+      margin-bottom: 20px;
       box-shadow: 0 0 0 2px #d03427;
       .services__btn {
         opacity: 1;
@@ -506,6 +595,7 @@
       font-weight: 400;
       font-size: 24px;
       line-height: 130%;
+      //   color: #ffffff;
     }
   }
 }
@@ -539,6 +629,9 @@
     font-size: 14px;
     line-height: 130%;
     color: #666666;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
   }
 
   &__btn {
