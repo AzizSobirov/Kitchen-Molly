@@ -558,7 +558,7 @@
     border-radius: 0px 0px 10px 10px;
 
     transition: 0.2s;
-    &:hover {
+    &.active {
       box-shadow: 0 0 0 2px #d03427;
       .services__btn {
         opacity: 1;

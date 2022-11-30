@@ -141,62 +141,78 @@ ol {
 }
 .nav__list {
   position: fixed;
-  padding: 0 60px;
   top: 80px;
   left: 50%;
   transform: translateX(-50%);
   width: 680px;
   height: 40px;
-  background: #e5e5e5;
-  border-radius: 0px 0px 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  z-index: 3;
+}
+.nav__link {
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  gap: 0px;
 }
-.nav__link {
-  position: relative;
-  height: 100%;
+.nav__link:nth-child(1) .nav__content {
+  transform: translateX(32px);
+}
+.nav__link:nth-child(1) a:first-child {
+  border-radius: 0px 0px 0 10px;
+}
+.nav__link:nth-child(5) .link {
+  border-radius: 0px 0px 10px 0;
 }
 .nav__link:hover .nav__content {
   display: flex;
+  z-index: -1;
 }
-.nav__link a {
+.nav__link .link {
+  position: relative;
+  width: 100%;
   height: 100%;
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
+  background: #e5e5e5;
   color: #666666;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0px;
+  z-index: 3;
   transition: 0.2s;
 }
-.nav__link a:hover {
+.nav__link .link:hover {
   color: #d03427;
 }
 .nav__content {
   position: absolute;
-  padding: 10px 0;
-  top: 40px;
-  left: 0;
-  height: auto;
+  padding: 25px 0;
+  top: 30px;
+  height: 250px;
   min-width: 200px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #666666;
   background: #ffffff;
   box-shadow: 4px 4px 19px rgba(0, 0, 0, 0.15);
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 0 10px;
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
   gap: 0px;
+  z-index: 2;
   display: none;
 }
 .nav__content li {
-  position: relative;
   padding: 0 20px;
   width: 100%;
   height: 35px;
@@ -245,19 +261,20 @@ ol {
 }
 .nav__item {
   position: absolute;
-  padding: 10px 0;
+  padding: 20px 0;
   top: 0;
   left: 200px;
-  height: auto;
-  width: 250px;
+  height: 250px;
+  width: 220px;
   background: #ffffff;
-  box-shadow: 4px 4px 19px rgba(0, 0, 0, 0.15);
-  border-radius: 0px 0px 10px 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), inset 4px 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 0px 0px 10px 0;
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
   gap: 0px;
+  z-index: 1;
   display: none;
 }
 .nav__item a {
@@ -1133,17 +1150,17 @@ ol {
   border-radius: 0px 0px 10px 10px;
   transition: 0.2s;
 }
-.services .services__card:hover {
+.services .services__card.active {
   box-shadow: 0 0 0 2px #d03427;
 }
-.services .services__card:hover .services__btn {
+.services .services__card.active .services__btn {
   opacity: 1;
 }
-.services .services__card:hover .services__figure {
+.services .services__card.active .services__figure {
   color: #ffffff;
   background: #d03427;
 }
-.services .services__card:hover .services__item span h3 {
+.services .services__card.active .services__item span h3 {
   color: #d03427;
 }
 .services .services__item {
