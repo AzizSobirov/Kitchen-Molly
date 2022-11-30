@@ -304,6 +304,11 @@ ol {
   left: 40px;
 }
 
+.nav a.active {
+  color: #d03427;
+  font-weight: 500;
+}
+
 .footer {
   padding: 35px 5vw;
   background: #05486a;

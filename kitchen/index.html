@@ -58,7 +58,7 @@
 
       <ul class="nav__list">
         <li class="nav__link">
-          <a href="/kitchen">Кухни</a>
+          <a class="active" href="/kitchen">Кухни</a>
           <ol class="nav__content">
             <li>
               <a href="/kitchen">Стиль</a>
@@ -70,52 +70,52 @@
               </div>
             </li>
             <li>
-              <a href="#">Материал </a>
+              <a href="/kitchen">Материал </a>
               <div class="nav__item">
-                <a href="#">Классика </a>
-                <a href="#">Современный</a>
-                <a href="#">Нео классика </a>
-                <a href="#">Лофт</a>
+                <a href="/kitchen/classic.html">Классика </a>
+                <a href="/kitchen/classic.html">Современный</a>
+                <a href="/kitchen/classic.html">Нео классика </a>
+                <a href="/kitchen/classic.html">Лофт</a>
               </div>
             </li>
             <li>
-              <a href="#">Форма и размеры</a>
+              <a href="/kitchen">Форма и размеры</a>
               <div class="nav__item">
-                <a href="#">Классика </a>
-                <a href="#">Современный</a>
-                <a href="#">Нео классика </a>
-                <a href="#">Лофт</a>
+                <a href="/kitchen/classic.html">Классика </a>
+                <a href="/kitchen/classic.html">Современный</a>
+                <a href="/kitchen/classic.html">Нео классика </a>
+                <a href="/kitchen/classic.html">Лофт</a>
               </div>
             </li>
           </ol>
         </li>
 
         <li class="nav__link">
-          <a href="#">Мебель</a>
+          <a href="/mebel">Мебель</a>
           <ol class="nav__content">
             <li>
-              <a href="#">Корпусная</a>
+              <a href="/mebel/massiva.html">Корпусная</a>
             </li>
             <li>
-              <a href="#">Из массива</a>
+              <a href="/mebel/massiva.html">Из массива</a>
             </li>
             <li>
-              <a href="#">В ванную</a>
+              <a href="/mebel">В ванную</a>
             </li>
           </ol>
         </li>
 
         <li class="nav__link">
-          <a href="#">Шкафы</a>
+          <a href="/cupboard">Шкафы</a>
           <ol class="nav__content">
             <li>
-              <a href="#">Купэ</a>
+              <a href="/cupboard/closet.html">Купэ</a>
             </li>
             <li>
-              <a href="#">Встраиваемые</a>
+              <a href="/cupboard/built.html">Встраиваемые</a>
             </li>
             <li>
-              <a href="#">Распашные</a>
+              <a href="/cupboard/wardrobe.html">Распашные</a>
             </li>
           </ol>
         </li>
@@ -130,6 +130,55 @@
       </ul>
     </nav>
 
+    <!-- Popup -->
+    <article class="popup">
+      <div class="popup__bg" onclick="closeForm()"></div>
+
+      <div class="popup__content">
+        <img
+          src="../assets/img/icons/close.svg"
+          class="popup__close"
+          alt=""
+          onclick="closeForm()"
+        />
+
+        <form
+          class="popup__form"
+          onsubmit="event.preventDefault(); submitForm();"
+        >
+          <div class="popup__title">
+            оставьте свои данные <mark>мы перезвоним вам</mark>
+          </div>
+
+          <div class="popup__group">
+            <input type="text" minlength="3" placeholder="Имя" required />
+            <input
+              type="number"
+              minlength="9"
+              placeholder="Номер телефона"
+              required
+            />
+          </div>
+
+          <textarea
+            class="popup__textarea"
+            placeholder="Комментарий"
+          ></textarea>
+
+          <button class="popup__btn">
+            Отправить
+          </button>
+        </form>
+
+        <div class="popup__subtitle">
+          <img src="../assets/img/icons/success.svg" alt="" />
+          <h2>Спасибо!</h2>
+          <h3>Заявка принята</h3>
+        </div>
+      </div>
+    </article>
+
+    <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="header__content">
@@ -215,9 +264,551 @@
       </div>
     </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- proccess -->
+    <section class="proccess">
+      <div class="proccess__text">
+        <h2>Кухни под ключ <mark>здесь и сейчас</mark></h2>
+      </div>
+      <div class="proccess__list">
+        <div class="proccess__item">
+          <img src="../assets/img/kitchen/order-1.svg" alt="" />
+          <p>
+            <b>Проектируем</b> <br /><br />
+            Делаем замеры и создаем индивидуальный дизайн-проект с учетом
+            особенностей вашей кухни
+          </p>
+        </div>
+        <div class="proccess__item">
+          <img src="../assets/img/kitchen/order-2.svg" alt="" />
+          <p>
+            <b>Производим</b> <br /><br />
+            Автоматика и опытный персонал гарантируют точность раскроя до 0,1 мм
+            и четкое соблюдение технологии производства
+          </p>
+        </div>
+        <div class="proccess__item">
+          <img src="../assets/img/kitchen/order-3.svg" alt="" />
+          <p>
+            <b>Комплектуем</b> <br /><br />
+            Фурнитура, столешницы, встроенная техника и освещение: подбираем
+            детали согласно вашему запросу
+          </p>
+        </div>
+        <div class="proccess__item">
+          <img src="../assets/img/kitchen/order-4.svg" alt="" />
+          <p>
+            <b>Доставляем</b> <br /><br />
+            В удобное для вас время мы доставим новую кухню точно по адресу и
+            бережно поднимем на нужный этаж
+          </p>
+        </div>
+        <div class="proccess__item">
+          <img src="../assets/img/kitchen/order-5.svg" alt="" />
+          <p>
+            <b>Собираем</b> <br /><br />
+            Наши мастера работают уверенно, потому что знают особенности каждой
+            детали, включая фурнитуру и электрику
+          </p>
+        </div>
+        <div class="proccess__item">
+          <img src="../assets/img/kitchen/order-6.svg" alt="" />
+          <p>
+            <b>Гарантируем</b> <br /><br />
+            Мы даем гарантию 24 месяца на всю кухонную мебель, потому что
+            уверены в качестве своей продукции
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <!-- Initialize Swiper -->
+    <!-- About Us -->
+    <section class="about">
+      <img src="../assets/img/kitchen/about.png" alt="" />
+      <span>
+        <p>
+          «Мы придумали, как снизить цены, не экономя на качестве. Для этого мы
+          оптимизировали работу в каждом из цехов, организовали собственную
+          службу доставки и отдел контроля качества. Оказалось, что следить за
+          всеми процессами самостоятельно — не только полезно для качества, но и
+          выгодно.»
+        </p>
+        <br />
+        <br />
+        <button>О заводе</button>
+      </span>
+    </section>
+
+    <!-- order now -->
+    <section class="order">
+      <div class="order__text">
+        <h2>До новой кухни — <mark>один клик</mark></h2>
+        <ul>
+          <li>
+            <h3>01.</h3>
+            <p>
+              <b>Вызвать дизайнера</b> <br />
+              выезд, замер, проект — бесплатно
+            </p>
+          </li>
+          <li>
+            <h3>02.</h3>
+            <p>
+              <b> Согласовать проект</b> <br />
+              дизайнер предложит оптимальную планировку
+            </p>
+          </li>
+          <li>
+            <h3>03.</h3>
+            <p>
+              <b>Внести предоплату</b> <br />
+              картой или наличными, беспроцентной рассрочкой
+            </p>
+          </li>
+          <li>
+            <h3>04.</h3>
+            <p>
+              <b>Получить кухню</b> <br />
+              минимум 21 день и Ваша кухня будет готова к монтажу
+            </p>
+          </li>
+        </ul>
+        <span>
+          <h4>
+            И всё это <br />
+            не выходя из дома
+          </h4>
+          <button>Вызвать дизайнера</button>
+        </span>
+      </div>
+      <img src="../assets/img/kitchen/order.png" alt="" />
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <div class="services__text">
+        <h2>какие кухни <mark>мы делаем</mark></h2>
+      </div>
+      <div class="services__list">
+        <div class="services__item">
+          <img src="../assets/img/kitchen/project-1.png" alt="" />
+          <p>Современный</p>
+        </div>
+        <div class="services__item">
+          <img src="../assets/img/kitchen/project-2.png" alt="" />
+          <p>Классика</p>
+        </div>
+        <div class="services__item">
+          <img src="../assets/img/kitchen/project-3.png" alt="" />
+          <p>Нео-классика</p>
+        </div>
+        <div class="services__item">
+          <img src="../assets/img/kitchen/project-4.png" alt="" />
+          <p>Лофт</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section class="projects">
+      <div class="projects__text">
+        <h2><mark>наши работы </mark></h2>
+      </div>
+      <div class="projects__list">
+        <div
+          class="projects__item"
+          style="background: url(../assets/img/main/project.png) center/cover;"
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+        <div
+          class="projects__item"
+          style="background: url(../assets/img/main/project.png) center/cover;"
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+        <div
+          class="projects__item"
+          style="background: url(../assets/img/main/project.png) center/cover;"
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+        <div
+          class="projects__item"
+          style="background: url(../assets/img/main/project.png) center/cover;"
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product quality -->
+    <section class="quality">
+      <div class="quality__text">
+        <h2><mark>ЧТО БУДЕТ,</mark> ЕСЛИ ДОВЕРИТЬСЯ "ЛЮБИТЕЛЯМ"</h2>
+      </div>
+      <ul class="quality__list">
+        <li>
+          <img src="../assets/img/kitchen/quality-1.png" alt="" />
+          <span>
+            <img src="../assets/img/icons/circle-close.svg" alt="" />
+            <h2>Некачественные материалы</h2>
+          </span>
+          <p>
+            Появляются сколы, в них попадает влага. Это приводит к вздутию и
+            дальнейшему разрушению покрытия.
+          </p>
+        </li>
+        <li>
+          <img src="../assets/img/kitchen/quality-2.png" alt="" />
+          <span>
+            <img src="../assets/img/icons/circle-close.svg" alt="" />
+            <h2>Китайская фурнитура</h2>
+          </span>
+          <p>
+            Некачественная фурнитура имеет срок службы 1-2 года. После чего
+            ломается, доставляя проблемы и неудобства.
+          </p>
+        </li>
+        <li>
+          <img src="../assets/img/kitchen/quality-3.png" alt="" />
+          <span>
+            <img src="../assets/img/icons/circle-close.svg" alt="" />
+            <h2>Конструктивные ошибки</h2>
+          </span>
+          <p>
+            Появляются сколы, в них попадает влага. Это приводит к вздутию и
+            дальнейшему разрушению покрытия.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- popular -->
+    <section class="popular">
+      <div class="popular__text">
+        <h2>Популярные модели</h2>
+      </div>
+      <div class="popular__list">
+        <div
+          class="popular__item"
+          style="
+            background: url(../assets/img/kitchen/popular-1.png) center/cover;
+          "
+        >
+          <span>
+            <p><b>Gloss Stretto Silver</b> <br />МОДЕРН, СОВРЕМЕННЫЙ</p>
+          </span>
+          <span>
+            <h3>Gloss Modern</h3>
+            <u>Габаритные размеры</u>
+            <p>3300 х 2200 мм.</p>
+            <u>Стоимость</u>
+            <p>119 500 руб.</p>
+            <button onclick="orderService()">Рассчитать цену</button>
+            <button onclick="openImage('../assets/img/kitchen/popular-1.png')">
+              Смотреть фото проекта
+            </button>
+          </span>
+        </div>
+        <div
+          class="popular__item"
+          style="
+            background: url(../assets/img/kitchen/popular-2.png) center/cover;
+          "
+        >
+          <span>
+            <p><b>Gloss Stretto Silver</b> <br />МОДЕРН, СОВРЕМЕННЫЙ</p>
+          </span>
+          <span>
+            <h3>Gloss Modern</h3>
+            <u>Габаритные размеры</u>
+            <p>3300 х 2200 мм.</p>
+            <u>Стоимость</u>
+            <p>119 500 руб.</p>
+            <button onclick="orderService()">Рассчитать цену</button>
+            <button onclick="openImage('../assets/img/kitchen/popular-2.png')">
+              Смотреть фото проекта
+            </button>
+          </span>
+        </div>
+        <div
+          class="popular__item"
+          style="
+            background: url(../assets/img/kitchen/popular-3.png) center/cover;
+          "
+        >
+          <span>
+            <p><b>Gloss Stretto Silver</b> <br />МОДЕРН, СОВРЕМЕННЫЙ</p>
+          </span>
+          <span>
+            <h3>Gloss Modern</h3>
+            <u>Габаритные размеры</u>
+            <p>3300 х 2200 мм.</p>
+            <u>Стоимость</u>
+            <p>119 500 руб.</p>
+            <button onclick="orderService()">Рассчитать цену</button>
+            <button onclick="openImage('../assets/img/kitchen/popular-3.png')">
+              Смотреть фото проекта
+            </button>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discount -->
+    <section class="discount">
+      <div class="discount__text">
+        <h2><mark>На 35%</mark> дешевле</h2>
+      </div>
+
+      <div class="discount__list">
+        <div class="discount__item">
+          <div class="discount__item-count">
+            <h2>01.</h2>
+          </div>
+          <img src="../assets/img/kitchen/discount-1.png" alt="" />
+          <span>
+            <h4>Вы не платите посредникам</h4>
+            <p>
+              Заказывая кухню напрямую у местного производителя, вы не содержите
+              посредников, экономите на доставке и получаете кухню по наилучшей
+              цене.
+            </p>
+          </span>
+        </div>
+
+        <div class="discount__item">
+          <div class="discount__item-count">
+            <h2>02.</h2>
+          </div>
+          <img src="../assets/img/kitchen/discount-2.png" alt="" />
+          <span>
+            <h4>Не переплачиваете за презентабельность салона</h4>
+            <p>
+              Наш офис – это не 100 «квадратов» в дорогом ТЦ, а место встречи с
+              заказчиком. Мы экономим на дорогой аренде и лишних сотрудниках, а
+              вы – семейный бюджет.
+            </p>
+          </span>
+        </div>
+
+        <div class="discount__item">
+          <div class="discount__item-count">
+            <h2>03.</h2>
+          </div>
+          <img src="../assets/img/kitchen/discount-3.png" alt="" />
+          <span>
+            <h4>Не тратитесь на дорогую рекламу</h4>
+            <p>
+              У нас нет отдела рекламы и маркетинга, как у известных брендов.
+              Большинство заказов мы получаем по рекомендации. Нас советуют, а
+              вы экономите.
+            </p>
+          </span>
+        </div>
+
+        <div class="discount__item">
+          <div class="discount__item-count">
+            <h2>04.</h2>
+          </div>
+          <img src="../assets/img/kitchen/discount-4.png" alt="" />
+          <span>
+            <h4>Не содержите раздутый штат</h4>
+            <p>
+              Наше производство – это небольшая команда из восьми
+              профессионалов, которые хорошо знают все тонкости своего дела. У
+              нас нет лишних людей, а у вас лишних трат.
+            </p>
+          </span>
+        </div>
+
+        <div class="discount__item">
+          <div class="discount__item-count">
+            <h2>05.</h2>
+          </div>
+          <img src="../assets/img/kitchen/discount-5.png" alt="" />
+          <span>
+            <h4>Не отдаёте свои деньги за чужие ошибки</h4>
+            <p>
+              У нас нет огромного потока заказов. Мы производим около десяти
+              кухонь в месяц, и руководитель лично контролирует все процессы.
+              Это минимизирует ошибки и брак, а также не закладывает их заранее
+              в стоимость вашей кухни.
+            </p>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- warranty -->
+    <section class="warranty">
+      <div class="warranty__item">
+        <img src="../assets/img/kitchen/warranty-1.png" alt="" />
+        <span>
+          <h3>СРОК ИЗГОТОВЛЕНИЯ КУХНИ - ОТ 21 ДНЯ</h3>
+          <p>
+            В случае нарушения сроков изготовления, несем материальную
+            ответственность согласно договора
+          </p>
+        </span>
+      </div>
+
+      <div class="warranty__item">
+        <img src="../assets/img/kitchen/warranty-2.png" alt="" />
+        <span>
+          <h3>НЕ БРОСАЕМ СВОИХ ЗАКАЗЧИКОВ</h3>
+          <p>
+            Мы дорожим репутацией - при обнаружении дефектов незамедлительно
+            исправляем недочеты за свой счет
+          </p>
+        </span>
+      </div>
+
+      <div class="warranty__item">
+        <img src="../assets/img/kitchen/warranty-3.png" alt="" />
+        <span>
+          <h3>ТВЕРДАЯ СМЕТА БЕЗ СЮРПРИЗОВ</h3>
+          <p>
+            Гарантируем поставку материалов по утвержденной спецификации и
+            никаких дополнительных платежей
+          </p>
+        </span>
+      </div>
+    </section>
+
+    <!-- SEO header -->
+    <section class="seo">
+      <div class="seo__text">
+        <h2><mark>СЕО заголовок</mark></h2>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa et velit
+        sit ipsum quis nullam. Tortor sagittis facilisis dictum duis purus est.
+        Venenatis auctor rhoncus dictum vitae justo in sem orci. Eget at sit
+        facilisi purus. Eu lobortis sed vel, netus consequat, etiam turpis
+        auctor. At eu nisl eleifend iaculis vestibulum tempor. Accumsan, ac quis
+        arcu viverra accumsan neque ut. Et tellus nunc amet, magna. Ridiculus
+        laoreet et diam at in lectus lobortis lectus. Hac ac mattis semper ac
+        tincidunt id nibh sed facilisis. Eu mauris orci sodales quam. Elementum
+        dictum elit laoreet mattis orci.
+      </p>
+      <div class="seo__btn">Показать ещё</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <ul>
+        <li>
+          <a href="/" class="nav__logo">
+            <img src="../assets/img/logo-white.svg" alt="" />
+            <h2>мебельная фабрика</h2>
+          </a>
+          <div class="footer__social">
+            <h5>Мы в соцсетях</h5>
+            <span>
+              <a href="#">
+                <img src="../assets/img/icons/tg-white.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../assets/img/icons/wht-white.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../assets/img/icons/vk-white.svg" alt="" />
+              </a>
+            </span>
+          </div>
+        </li>
+        <li>
+          <h3>КУХНИ</h3>
+          <a href="#">Классика</a>
+          <a href="#">Современный</a>
+          <a href="#">Нео классика</a>
+          <a href="#">Лофт</a>
+          <a href="#">МДФ Эмаль</a>
+          <a href="#">Глянец</a>
+          <a href="#">Матовый</a>
+          <a href="#">Шпон</a>
+          <a href="#">Массив</a>
+          <a href="#">Акрил</a>
+        </li>
+        <li>
+          <h3>КУХНИ</h3>
+          <a href="#">Пластик</a>
+          <a href="#">ЛДСП</a>
+          <a href="#">Плиты TSS Smart</a>
+          <a href="#">Большая кухня</a>
+          <a href="#">Маленькая кухня</a>
+          <a href="#">Кухня без ручек</a>
+          <a href="#">Кухня с барной стойкой</a>
+          <a href="#">П образная кухня</a>
+          <a href="#">Прямая кухня</a>
+          <a href="#">Угловая</a>
+        </li>
+        <li>
+          <h3>МЕБЕЛЬ</h3>
+          <a href="#">Корпусная</a>
+          <a href="#">Из массива</a>
+          <a href="#">В ванную</a>
+          <br /><br />
+          <h3>ШКАФЫ</h3>
+          <a href="#">Купэ</a>
+          <a href="#">Встраиваемые</a>
+          <a href="#">Распашные</a>
+        </li>
+        <li>
+          <h4>
+            г. Москва, <br />
+            ул. Самуила Маршака, 22 <br /><br />
+            г. Москва, <br />
+            ул. Рождественская, 32 <br /><br />
+            +7 (495) 210-88-50 <br /><br />
+            info@mail.ru
+          </h4>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
@@ -230,6 +821,33 @@
           clickable: true,
         },
       });
+
+      // popup
+      let popup = document.querySelector(".popup");
+      let popupForm = document.querySelector(".popup__form");
+      let popupSub = document.querySelector(".popup__subtitle");
+
+      function submitForm() {
+        popupForm.style.display = "none";
+        popupSub.style.display = "flex";
+        setTimeout(() => {
+          popupSub.style.display = "none";
+          popupForm.style.display = "flex";
+          closeForm();
+        }, 3000);
+      }
+
+      function closeForm() {
+        popup.style.display = "none";
+      }
+
+      function orderService() {
+        popup.style.display = "flex";
+      }
+
+      function openImage(img) {
+        console.log(img);
+      }
     </script>
   </body>
 </html>

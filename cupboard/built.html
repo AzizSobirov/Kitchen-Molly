@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/cupboard.css" />
+
+    <title>Mebel</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <a href="/" class="nav__logo">
+        <img src="../assets/img/logo.svg" alt="" />
+        <h2>мебельная фабрика</h2>
+      </a>
+
+      <div class="nav__actions">
+        <div class="nav__action">
+          <div class="nav__figure">
+            <img src="../assets/img/icons/call.svg" alt="" />
+          </div>
+          <span>
+            <h3>+7 (495) 210-88-50</h3>
+            <a href="tel:+74952108850">Заказать звонок</a>
+          </span>
+        </div>
+        <div class="nav__action">
+          <div class="nav__figure">
+            <img src="../assets/img/icons/shop.svg" alt="" />
+          </div>
+          <span>
+            <h3>г.Москва</h3>
+            <a href="tel:+74952108850">Список салонов</a>
+          </span>
+        </div>
+        <div class="nav__action">
+          <div class="nav__figure">
+            <h5>Мы в соцсетях</h5>
+            <span>
+              <a href="#">
+                <img src="../assets/img/icons/telegram.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../assets/img/icons/whatsapp.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../assets/img/icons/vk.svg" alt="" />
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="nav__list">
+        <li class="nav__link">
+          <a href="/kitchen">Кухни</a>
+          <ol class="nav__content">
+            <li>
+              <a href="/kitchen">Стиль</a>
+              <div class="nav__item">
+                <a href="/kitchen/classic.html">Классика </a>
+                <a href="/kitchen/classic.html">Современный</a>
+                <a href="/kitchen/classic.html">Нео классика </a>
+                <a href="/kitchen/classic.html">Лофт</a>
+              </div>
+            </li>
+            <li>
+              <a href="/kitchen">Материал </a>
+              <div class="nav__item">
+                <a href="/kitchen/classic.html">Классика </a>
+                <a href="/kitchen/classic.html">Современный</a>
+                <a href="/kitchen/classic.html">Нео классика </a>
+                <a href="/kitchen/classic.html">Лофт</a>
+              </div>
+            </li>
+            <li>
+              <a href="/kitchen">Форма и размеры</a>
+              <div class="nav__item">
+                <a href="/kitchen/classic.html">Классика </a>
+                <a href="/kitchen/classic.html">Современный</a>
+                <a href="/kitchen/classic.html">Нео классика </a>
+                <a href="/kitchen/classic.html">Лофт</a>
+              </div>
+            </li>
+          </ol>
+        </li>
+
+        <li class="nav__link">
+          <a href="/mebel">Мебель</a>
+          <ol class="nav__content">
+            <li>
+              <a href="/mebel/massiva.html">Корпусная</a>
+            </li>
+            <li>
+              <a href="/mebel/massiva.html">Из массива</a>
+            </li>
+            <li>
+              <a href="/mebel">В ванную</a>
+            </li>
+          </ol>
+        </li>
+
+        <li class="nav__link">
+          <a class="active" href="/cupboard">Шкафы</a>
+          <ol class="nav__content">
+            <li>
+              <a href="/cupboard/closet.html">Купэ</a>
+            </li>
+            <li>
+              <a href="/cupboard/built.html">Встраиваемые</a>
+            </li>
+            <li>
+              <a href="/cupboard/wardrobe.html">Распашные</a>
+            </li>
+          </ol>
+        </li>
+
+        <li class="nav__link">
+          <a href="/about.html">О нас</a>
+        </li>
+
+        <li class="nav__link">
+          <a href="/contact.html">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Popup -->
+    <article class="popup">
+      <div class="popup__bg" onclick="closeForm()"></div>
+
+      <div class="popup__content">
+        <img
+          src="../assets/img/icons/close.svg"
+          class="popup__close"
+          alt=""
+          onclick="closeForm()"
+        />
+
+        <form
+          class="popup__form"
+          onsubmit="event.preventDefault(); submitForm();"
+        >
+          <div class="popup__title">
+            оставьте свои данные <mark>мы перезвоним вам</mark>
+          </div>
+
+          <div class="popup__group">
+            <input type="text" minlength="3" placeholder="Имя" required />
+            <input
+              type="number"
+              minlength="9"
+              placeholder="Номер телефона"
+              required
+            />
+          </div>
+
+          <textarea
+            class="popup__textarea"
+            placeholder="Комментарий"
+          ></textarea>
+
+          <button class="popup__btn">
+            Отправить
+          </button>
+        </form>
+
+        <div class="popup__subtitle">
+          <img src="../assets/img/icons/success.svg" alt="" />
+          <h2>Спасибо!</h2>
+          <h3>Заявка принята</h3>
+        </div>
+      </div>
+    </article>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header__content">
+        <h1>Встраиваемые шкафы</h1>
+        <h2>
+          по индивидуальному заказу <br />
+          с гарантией
+        </h2>
+        <div class="header__content-list">
+          <span>
+            <img src="../assets/img/kitchen/classic-1.svg" alt="" />
+            <p>
+              Реализация проекта <br />
+              от 21 дня
+            </p>
+          </span>
+          <span>
+            <img src="../assets/img/kitchen/classic-2.svg" alt="" />
+            <p>Персональный подход и премиульный сервис</p>
+          </span>
+          <span>
+            <img src="../assets/img/kitchen/classic-3.svg" alt="" />
+            <p>
+              Рассрочка <br />
+              0-0-6
+            </p>
+          </span>
+        </div>
+      </div>
+      <div class="header__img">
+        <img src="../assets/img/cupboard/banner-4.png" alt="" />
+      </div>
+    </header>
+
+    <!-- projects -->
+    <section class="projects">
+      <div class="projects__text">
+        <h2><mark>наши работы </mark></h2>
+      </div>
+      <div class="projects__list">
+        <div
+          class="projects__item"
+          style="
+            background: url(../assets/img/cupboard/project-1.png) center/cover;
+          "
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+        <div
+          class="projects__item"
+          style="
+            background: url(../assets/img/cupboard/project-2.png) center/cover;
+          "
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+        <div
+          class="projects__item"
+          style="
+            background: url(../assets/img/cupboard/project-3.png) center/cover;
+          "
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+        <div
+          class="projects__item"
+          style="
+            background: url(../assets/img/cupboard/project-4.png) center/cover;
+          "
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+        <div
+          class="projects__item"
+          style="
+            background: url(../assets/img/cupboard/project-1.png) center/cover;
+          "
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+        <div
+          class="projects__item"
+          style="
+            background: url(../assets/img/cupboard/project-2.png) center/cover;
+          "
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+        <div
+          class="projects__item"
+          style="
+            background: url(../assets/img/cupboard/project-3.png) center/cover;
+          "
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+        <div
+          class="projects__item"
+          style="
+            background: url(../assets/img/cupboard/project-4.png) center/cover;
+          "
+        >
+          <span>
+            <p>Кухня угловая</p>
+            <b>
+              <h5>
+                Размеры: <br />
+                Изготовление:
+              </h5>
+              <h5>2,4 м х 3,2 м <br />23 дня</h5>
+            </b>
+            <button onclick="orderService()">Хочу такую кухню</button>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section class="form">
+      <div class="form__text">
+        <h2>новая кухня за 3 недели <mark>Это реально!</mark></h2>
+        <ul>
+          <li>
+            <img src="../assets/img/kitchen/form-1.svg" alt="" />
+            <p>
+              <b>Замер бесплатно</b> <br />
+              Мастер произведет замер и рассчитает Вашу кухню + сделает
+              максимальную скидку.
+            </p>
+          </li>
+          <li>
+            <img src="../assets/img/kitchen/form-2.svg" alt="" />
+            <p>
+              <b>Рассрочка 0%</b><br />
+              Беспроцентная рассрочка сроком до 12 месяцев с минимальным
+              первоночальным взносом на любые модели.
+            </p>
+          </li>
+          <li>
+            <img src="../assets/img/kitchen/form-3.svg" alt="" />
+            <p>
+              <b
+                >Минимум шума <br />
+                при сборке</b
+              >
+            </p>
+          </li>
+        </ul>
+      </div>
+      <form class="form__content">
+        <div class="form__content-text">
+          <h2>Дизайн проект бесплатно!</h2>
+          <p>Мы подскажем и подберем кухню по демократичной цене, для Вас!</p>
+          <input type="text" placeholder="Имя" />
+          <input type="number" placeholder="Номер телефона" />
+          <button>Заказать замер</button>
+        </div>
+        <img src="../assets/img/cupboard/form.png" alt="" />
+      </form>
+    </section>
+
+    <!-- Quality -->
+    <section class="quality">
+      <div class="quality__text">
+        <h2>Нашему качеству <mark>доверяют</mark></h2>
+        <p>
+          Мы являемся главным партнером передачи "Большие перемены" <br />
+          <b>на телеканале “Россия 1”</b>
+        </p>
+      </div>
+
+      <div class="quality__content">
+        <div class="quality__item">
+          <span>
+            <img
+              src="../assets/img/icons/play.svg"
+              alt=""
+              onclick="playVideo(1)"
+            />
+            <h2>Мы в эфире</h2>
+          </span>
+          <iframe
+            id="iframe-1"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/wafGGDX0mK4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="quality__item">
+          <span>
+            <img
+              src="../assets/img/icons/play.svg"
+              onclick="playVideo(2)"
+              alt=""
+            />
+            <h2>Мы в эфире</h2>
+          </span>
+          <iframe
+            id="iframe-2"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/wafGGDX0mK4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <div class="services__text">
+        <h2>чем мы <mark>лучше других команий?</mark></h2>
+      </div>
+      <div class="container">
+        <div class="services__content">
+          <div class="services__card">
+            <div class="services__figure">
+              <h2>НАША КОМПАНИЯ</h2>
+            </div>
+            <div class="services__item">
+              <span>
+                <p>
+                  Цена 1 п.м.
+                </p>
+                <h3>от 8 800 ₽</h3>
+              </span>
+              <span>
+                <p>Внимание к клиентам</p>
+                <i>
+                  <img src="../assets/img/icons/human.svg" alt="" />
+                </i>
+              </span>
+              <span>
+                <p>Качество</p>
+                <h3>5/5</h3>
+              </span>
+              <span>
+                <p>Экономия</p>
+                <h3>до 70%</h3>
+              </span>
+            </div>
+            <div class="services__btn" onclick="orderService()">
+              Заказывайте выгодно!
+            </div>
+          </div>
+
+          <div class="services__card">
+            <div class="services__figure">
+              <h2>готовая мебель</h2>
+            </div>
+            <div class="services__item">
+              <span>
+                <p>
+                  Цена 1 п.м.
+                </p>
+                <h3>от 10 800 ₽</h3>
+              </span>
+              <span>
+                <p>Внимание к клиентам</p>
+                <i>
+                  <img src="../assets/img/icons/human.svg" alt="" />
+                  <img src="../assets/img/icons/human.svg" alt="" />
+                  <img src="../assets/img/icons/human.svg" alt="" />
+                  <img src="../assets/img/icons/human.svg" alt="" />
+                </i>
+              </span>
+              <span>
+                <p>Качество</p>
+                <h3>2/5</h3>
+              </span>
+              <span>
+                <p>Экономия</p>
+                <h3>до 47%</h3>
+              </span>
+            </div>
+            <div class="services__btn" onclick="orderService()">
+              Заказывайте выгодно!
+            </div>
+          </div>
+
+          <div class="services__card">
+            <div class="services__figure">
+              <h2>Крупные бренды</h2>
+            </div>
+            <div class="services__item">
+              <span>
+                <p>
+                  Цена 1 п.м.
+                </p>
+                <h3>от 17 500 ₽</h3>
+              </span>
+              <span>
+                <p>Внимание к клиентам</p>
+                <i>
+                  <img src="../assets/img/icons/human.svg" alt="" />
+                  <img src="../assets/img/icons/human.svg" alt="" />
+                </i>
+              </span>
+              <span>
+                <p>Качество</p>
+                <h3>4/5</h3>
+              </span>
+              <span>
+                <p>Экономия</p>
+                <h3>до 15%</h3>
+              </span>
+            </div>
+            <div class="services__btn" onclick="orderService()">
+              Заказывайте выгодно!
+            </div>
+          </div>
+
+          <div class="services__card">
+            <div class="services__figure">
+              <h2>салоны мебели</h2>
+            </div>
+            <div class="services__item">
+              <span>
+                <p>
+                  Цена 1 п.м.
+                </p>
+                <h3>от 24 300 ₽</h3>
+              </span>
+              <span>
+                <p>Внимание к клиентам</p>
+                <i>
+                  <img src="../assets/img/icons/human.svg" alt="" />
+                  <img src="../assets/img/icons/human.svg" alt="" />
+                  <img src="../assets/img/icons/human.svg" alt="" />
+                </i>
+              </span>
+              <span>
+                <p>Качество</p>
+                <h3>3/5</h3>
+              </span>
+              <span>
+                <p>Экономия</p>
+                <h3>0%</h3>
+              </span>
+            </div>
+            <div class="services__btn" onclick="orderService()">
+              Заказывайте выгодно!
+            </div>
+          </div>
+        </div>
+        <div class="services__img">
+          <img src="../assets/img/cupboard/service.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO header -->
+    <section class="seo">
+      <div class="seo__text">
+        <h2><mark>СЕО заголовок</mark></h2>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa et velit
+        sit ipsum quis nullam. Tortor sagittis facilisis dictum duis purus est.
+        Venenatis auctor rhoncus dictum vitae justo in sem orci. Eget at sit
+        facilisi purus. Eu lobortis sed vel, netus consequat, etiam turpis
+        auctor. At eu nisl eleifend iaculis vestibulum tempor. Accumsan, ac quis
+        arcu viverra accumsan neque ut. Et tellus nunc amet, magna. Ridiculus
+        laoreet et diam at in lectus lobortis lectus. Hac ac mattis semper ac
+        tincidunt id nibh sed facilisis. Eu mauris orci sodales quam. Elementum
+        dictum elit laoreet mattis orci.
+      </p>
+      <div class="seo__btn">Показать ещё</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <ul>
+        <li>
+          <a href="/" class="nav__logo">
+            <img src="../assets/img/logo-white.svg" alt="" />
+            <h2>мебельная фабрика</h2>
+          </a>
+          <div class="footer__social">
+            <h5>Мы в соцсетях</h5>
+            <span>
+              <a href="#">
+                <img src="../assets/img/icons/tg-white.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../assets/img/icons/wht-white.svg" alt="" />
+              </a>
+              <a href="#">
+                <img src="../assets/img/icons/vk-white.svg" alt="" />
+              </a>
+            </span>
+          </div>
+        </li>
+        <li>
+          <h3>КУХНИ</h3>
+          <a href="#">Классика</a>
+          <a href="#">Современный</a>
+          <a href="#">Нео классика</a>
+          <a href="#">Лофт</a>
+          <a href="#">МДФ Эмаль</a>
+          <a href="#">Глянец</a>
+          <a href="#">Матовый</a>
+          <a href="#">Шпон</a>
+          <a href="#">Массив</a>
+          <a href="#">Акрил</a>
+        </li>
+        <li>
+          <h3>КУХНИ</h3>
+          <a href="#">Пластик</a>
+          <a href="#">ЛДСП</a>
+          <a href="#">Плиты TSS Smart</a>
+          <a href="#">Большая кухня</a>
+          <a href="#">Маленькая кухня</a>
+          <a href="#">Кухня без ручек</a>
+          <a href="#">Кухня с барной стойкой</a>
+          <a href="#">П образная кухня</a>
+          <a href="#">Прямая кухня</a>
+          <a href="#">Угловая</a>
+        </li>
+        <li>
+          <h3>МЕБЕЛЬ</h3>
+          <a href="#">Корпусная</a>
+          <a href="#">Из массива</a>
+          <a href="#">В ванную</a>
+          <br /><br />
+          <h3>ШКАФЫ</h3>
+          <a href="#">Купэ</a>
+          <a href="#">Встраиваемые</a>
+          <a href="#">Распашные</a>
+        </li>
+        <li>
+          <h4>
+            г. Москва, <br />
+            ул. Самуила Маршака, 22 <br /><br />
+            г. Москва, <br />
+            ул. Рождественская, 32 <br /><br />
+            +7 (495) 210-88-50 <br /><br />
+            info@mail.ru
+          </h4>
+        </li>
+      </ul>
+    </footer>
+
+    <script>
+      // popup
+      let popup = document.querySelector(".popup");
+      let popupForm = document.querySelector(".popup__form");
+      let popupSub = document.querySelector(".popup__subtitle");
+
+      function submitForm() {
+        popupForm.style.display = "none";
+        popupSub.style.display = "flex";
+        setTimeout(() => {
+          popupSub.style.display = "none";
+          popupForm.style.display = "flex";
+          closeForm();
+        }, 3000);
+      }
+
+      function closeForm() {
+        popup.style.display = "none";
+      }
+
+      function orderService() {
+        popup.style.display = "flex";
+      }
+    </script>
+  </body>
+</html>
