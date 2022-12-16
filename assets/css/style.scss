@@ -1,0 +1,1756 @@
+@import "icode";
+
+.header {
+  position: relative;
+  padding: 90px 0 0;
+  overflow: hidden;
+  @media screen and (max-width: 1024px) {
+    padding: 90px 15px 40px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 10px);
+    height: 200px;
+    left: 0;
+    bottom: -170px;
+    background: #ffffff;
+    box-shadow: 0px -38px 44px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 10px 10px;
+    transform: rotate(-2deg);
+    z-index: 2;
+  }
+  .container {
+    @include flex(center, space-between, row, 40px);
+    padding: 0 15px;
+    width: 1180px;
+    margin: 0 auto;
+    overflow: hidden;
+    @media screen and (max-width: 1024px) {
+      max-width: 100vw;
+    }
+    @media screen and (max-width: 1024px) {
+      gap: 20px;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+    width: 55%;
+    @include flex;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+    .swiper-slide {
+      position: relative;
+      background: #fff;
+      .main__swiper-action + img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        @media screen and (max-width: 1024px) {
+          height: 220px;
+        }
+      }
+    }
+  }
+
+  &__text {
+    width: 45%;
+    @include flex(start, center, column, 0px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+    h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 87%;
+      color: #d03427;
+    }
+    h3 {
+      margin: 15px 0;
+      font-weight: 400;
+      font-size: 20px;
+      color: #05486a;
+    }
+    p {
+      font-size: 14px;
+      color: #666666;
+    }
+  }
+
+  .main__swiper-action {
+    position: absolute;
+    top: 30%;
+    padding: 10px 15px;
+    height: 70px;
+    background: #ffffff;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    @include flex(center, space-between, row, 10px);
+    z-index: 2;
+    @media screen and (max-width: 1024px) {
+      top: auto;
+      bottom: 10%;
+      left: 10%;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: #05486a;
+    }
+    h2 {
+      margin-top: 10px;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 130%;
+      color: #d03427;
+    }
+    span {
+      align-self: flex-start;
+      img {
+        width: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+main.container {
+  padding: 0 15px;
+  width: 1180px;
+  margin: 0 auto;
+  overflow: hidden;
+  @media screen and (max-width: 1024px) {
+    max-width: 100vw;
+  }
+
+  section {
+    padding: 50px 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    @media screen and (max-width: 756px) {
+      padding: 20px 0;
+    }
+  }
+}
+
+.advantages {
+  padding: 50px 0;
+  width: 100%;
+  overflow: hidden;
+  @include flex(center, center, row);
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__img {
+    width: 528px;
+    height: 372px;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+      max-height: 370px;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    padding-left: 72px;
+    @include flex(start, center, column, 20px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+
+    span {
+      transform: translateX(-100px);
+      width: 580px;
+      height: 316px;
+      padding: 20px 100px;
+      background: #ffffff;
+      box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.15);
+      border-radius: 65px 0px;
+      @include flex(start, center, column, 20px);
+      @media screen and (max-width: 1200px) {
+        width: 500px;
+        height: 380px;
+      }
+      @media screen and (max-width: 1024px) {
+        padding: 25px 15px 25px 60px;
+        width: 95%;
+        height: auto;
+        align-self: center;
+        transform: translateX(0px);
+        overflow: hidden;
+      }
+      p {
+        position: relative;
+        font-size: 14px;
+        line-height: 130%;
+        color: #666666;
+        &::before {
+          position: absolute;
+          top: 5.5px;
+          content: "";
+          left: -60px;
+          width: 40px;
+          height: 2.5px;
+          background: #d03427;
+          transition: 0.2s;
+        }
+
+        &::after {
+          position: absolute;
+          top: 2.5px;
+          left: -20px;
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: #d03427;
+          border-radius: 50%;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}
+
+.produce {
+  padding: 50px 0;
+  @include flex(start, start, column, 20px);
+
+  h2 {
+    font-family: "Bebas Neue";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: #d03427;
+  }
+
+  &__content {
+    width: 100%;
+    @include flex(start, start, row, 20px);
+    flex-wrap: wrap;
+    @media screen and (max-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      .produce__item {
+        height: 150px !important;
+        width: 100% !important;
+        &:last-child {
+          grid-column-start: span 2;
+        }
+      }
+    }
+    @media screen and (max-width: 576px) {
+      .produce__item {
+        height: 100px !important;
+      }
+    }
+  }
+
+  &__item {
+    height: 205px;
+    background: #ffffff;
+    border: 1.5px solid #bbbbbb;
+    @include flex(start, space-between, row);
+    overflow: hidden;
+    transition: 0.2s;
+
+    &:hover {
+      border: 1px solid #05486a;
+      box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.25);
+    }
+
+    p {
+      padding: 12px;
+      font-size: 14px;
+      line-height: 130%;
+      color: #05486a;
+    }
+    img {
+      width: 100%;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: calc(100% / 3 - 20px);
+    }
+
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7) {
+      height: 150px;
+      width: calc(100% / 4 - 20px);
+    }
+
+    &:nth-child(8),
+    &:nth-child(9) {
+      width: calc(100% / 2 - 20px);
+    }
+  }
+}
+
+.quality {
+  @include flex(space-between, start, column, 40px);
+
+  &__text {
+    @include flex(start, start, column, 10px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+    p {
+      position: relative;
+      padding-left: 60px;
+      line-height: 130%;
+      color: #666666;
+      &::before {
+        position: absolute;
+        top: 7px;
+        content: "";
+        left: 0px;
+        width: 40px;
+        height: 2.5px;
+        background: #d03427;
+        transition: 0.2s;
+      }
+
+      &::after {
+        position: absolute;
+        top: 4px;
+        left: 40px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: #d03427;
+        border-radius: 50%;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 0 10px 140px;
+    width: 100%;
+    overflow: hidden;
+    @include flex(center, center, row, 20px);
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 20px;
+      padding: 10px 10px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -200px;
+      left: 0;
+      width: 540px;
+      height: 410px;
+      background: url(../img/shape-1.png);
+      z-index: -1;
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: -150px;
+      right: 0;
+      width: 616px;
+      height: 524px;
+      background: url(../img/shape-2.png);
+      z-index: -1;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    padding: 15px;
+    width: 580px;
+    height: 316px;
+    background: #ffffff;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.15);
+    border-radius: 65px 0px;
+    @include flex(end, space-between, row, 15px);
+    &:last-child {
+      transform: translateY(120px);
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding: 10px;
+      width: 100%;
+      height: 400px;
+      flex-direction: column;
+      &:last-child {
+        transform: translateY(0);
+      }
+    }
+    @media screen and (max-width: 576px) {
+      height: 280px;
+    }
+
+    span {
+      @include flex(end, end, column-reverse, 10px);
+      @media screen and (max-width: 1024px) {
+        flex-direction: row;
+        img {
+          width: 24px;
+          transform: rotate(90deg);
+        }
+      }
+
+      h2 {
+        font-family: "Bebas Neue";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: #bbbbbb;
+
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        @media screen and (max-width: 1024px) {
+          font-size: 20px;
+          transform: rotate(0);
+          writing-mode: unset;
+        }
+      }
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 65px 0px;
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+.services {
+  padding: 50px 0;
+  @include flex(start, start, column, 40px);
+
+  &__text {
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  .container {
+    padding: 10px;
+    @include flex(start, center, row, 0px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      @include flex(center, center, column-reverse, 0px);
+
+      gap: 20px;
+    }
+  }
+
+  .services__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @media screen and (max-width: 1024px) {
+      width: 600px;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      place-items: center;
+    }
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  .services__img {
+    width: 700px;
+    max-width: 65%;
+    @include flex;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      max-width: 100%;
+    }
+    img {
+      width: 100%;
+      @media screen and (max-width: 1024px) {
+        width: 70%;
+      }
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .services__card {
+    padding: 0 0 20px;
+    width: 230px;
+    position: relative;
+    @include flex(start, start, column, 10px);
+    border-radius: 0px 0px 10px 10px;
+    transition: 0.2s;
+    &.active {
+      margin-bottom: 20px;
+      box-shadow: 0 0 0 2px #d03427;
+      .services__btn {
+        opacity: 1;
+      }
+
+      .services__figure {
+        color: #ffffff;
+        background: #d03427;
+      }
+
+      .services__item span h3 {
+        color: #d03427;
+      }
+    }
+  }
+
+  .services__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    span {
+      padding: 10px;
+      @include flex(start, start, column, 5px);
+      p {
+        font-size: 12px;
+        line-height: 130%;
+        color: #666666;
+      }
+      h3 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 130%;
+      }
+    }
+  }
+
+  .services__btn {
+    position: absolute;
+    bottom: -17px;
+    opacity: 0;
+    align-self: center;
+    width: 80%;
+    height: 35px;
+    background: linear-gradient(180deg, #e16459 0%, #d03427 100%);
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 11px rgba(208, 52, 39, 0.5);
+    border-radius: 0px 0px 10px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    @include flex;
+  }
+
+  .services__figure {
+    width: 100%;
+    height: 65px;
+    background: #ffffff;
+    box-shadow: 4px 4px 19px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 10px 10px;
+    transition: 0.2s;
+    @include flex;
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      //   color: #ffffff;
+    }
+  }
+}
+
+.projects {
+  padding: 50px 0;
+  width: 100%;
+  @include flex(start, start, column, 40px);
+
+  &__text {
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    gap: 20px;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 220px);
+    }
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 150px);
+      gap: 7px;
+    }
+  }
+
+  &__item {
+    @include flex(start, end, column);
+    &:hover {
+      span {
+        opacity: 1;
+      }
+    }
+    span {
+      position: relative;
+      padding: 15px 0;
+      width: 100%;
+      height: 140px;
+      color: #fff;
+      @include flex(start, end, column, 5px);
+      background: linear-gradient(
+        179.54deg,
+        rgba(5, 72, 106, 0) 0.4%,
+        #05486a 86.33%
+      );
+      opacity: 0;
+      transition: 0.2s;
+
+      p {
+        padding-left: 70px;
+        position: relative;
+        @media screen and (max-width: 1024px) {
+          padding-left: 30px;
+        }
+        &::before {
+          position: absolute;
+          top: 8px;
+          content: "";
+          left: 5px;
+          width: 40px;
+          height: 2.5px;
+          background: #d03427;
+          transition: 0.2s;
+          @media screen and (max-width: 1024px) {
+            width: 15px;
+          }
+        }
+
+        &::after {
+          position: absolute;
+          top: 5px;
+          left: 40px;
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: #d03427;
+          border-radius: 50%;
+          transition: 0.2s;
+          @media screen and (max-width: 1024px) {
+            left: 15px;
+          }
+        }
+      }
+      h3 {
+        padding-left: 70px;
+        @media screen and (max-width: 1024px) {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+.production {
+  padding: 50px 0;
+  @include flex(start, start, column, 40px);
+
+  &__text {
+    @include flex(start, start, column, 10px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    @include flex(start, start, row, 40px);
+    @media screen and (max-width: 1024px) {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0px;
+      right: 0px;
+      width: 630px;
+      height: 410px;
+      background: url(../img/shape-1.png);
+      z-index: -1;
+    }
+  }
+
+  &__item {
+    padding: 15px;
+    width: 580px;
+    height: 316px;
+    background: #ffffff;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.15);
+    border-radius: 65px 0px;
+    @include flex(end, space-between, row, 15px);
+    &:last-child {
+      transform: translateY(120px);
+    }
+
+    @media screen and (max-width: 1024px) {
+      padding: 10px;
+      width: 100%;
+      flex-direction: column;
+      &:last-child {
+        transform: translateY(0);
+      }
+    }
+
+    span {
+      @include flex(end, end, column-reverse, 10px);
+      @media screen and (max-width: 1024px) {
+        flex-direction: row;
+        img {
+          width: 24px;
+          transform: rotate(90deg);
+        }
+      }
+
+      h2 {
+        font-family: "Bebas Neue";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: #bbbbbb;
+
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        @media screen and (max-width: 1024px) {
+          font-size: 20px;
+          transform: rotate(0);
+          writing-mode: unset;
+        }
+      }
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 65px 0px;
+      outline: none;
+      border: none;
+    }
+  }
+
+  &__item + p {
+    position: relative;
+    width: 40%;
+    padding-left: 60px;
+    line-height: 130%;
+    color: #666666;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+    &::before {
+      position: absolute;
+      top: 7px;
+      content: "";
+      left: 0px;
+      width: 40px;
+      height: 2.5px;
+      background: #d03427;
+      transition: 0.2s;
+    }
+
+    &::after {
+      position: absolute;
+      top: 4px;
+      left: 40px;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: #d03427;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+  }
+}
+
+.questions {
+  padding: 50px 0;
+  width: 100%;
+  @include flex(start, start, column, 40px);
+
+  &__text {
+    @include flex(start, start, column, 10px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  .container {
+    @include flex(start, center, row, 40px);
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__list {
+    width: 45%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    height: 45px;
+    background: linear-gradient(180deg, #e16459 0%, #d03427 100%);
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 11px rgba(208, 52, 39, 0.5);
+    border-radius: 0px 0px 10px 10px;
+    font-size: 14px;
+    line-height: 130%;
+    color: #ffffff;
+    @include flex;
+  }
+
+  &__video {
+    position: relative;
+    width: 580px;
+    height: 315px;
+    background: #eaebed;
+    filter: drop-shadow(6px 6px 0px #05486a);
+    border-radius: 65px 0px;
+    overflow: hidden;
+    @include flex;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      height: auto;
+    }
+    &:hover {
+      img {
+        opacity: 1;
+      }
+    }
+    img {
+      position: absolute;
+      z-index: 2;
+      width: 50px;
+      opacity: 0;
+      cursor: pointer;
+      transition: 0.2s;
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+    video {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    padding: 20px;
+    height: 100px;
+    background: #ffffff;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 35px 0px;
+    transition: 0.2s;
+    @include flex(center, start, row, 10px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      padding: 10px;
+    }
+    &:hover {
+      border: 1px solid #05486a;
+      box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.15);
+      border-radius: 35px 0px;
+      span svg path {
+        fill: #d03427;
+      }
+    }
+    span {
+      cursor: pointer;
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.seo {
+  padding: 50px 0;
+  @include flex(start, start, column, 20px);
+
+  &__text {
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  p {
+    width: 70%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #666666;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    width: 180px;
+    height: 35px;
+    border: 1px solid #d03427;
+    border-radius: 0px 0px 5px 5px;
+    font-size: 14px;
+    line-height: 130%;
+    color: #d03427;
+    cursor: pointer;
+    transition: 0.2s;
+    @include flex;
+    &:hover {
+      color: #fff;
+      background: #d03427;
+    }
+  }
+}
+
+// contact
+.contact {
+  padding: 65px 5vw;
+  max-width: 100vw;
+  overflow: hidden;
+  .container {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    @include flex(start, center, row, 40px);
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 65px;
+      left: 5vw;
+      width: 630px;
+      height: 410px;
+      background: url(../img/shape-1.png);
+      z-index: -1;
+    }
+  }
+
+  &__text {
+    @include flex(start, center, column, 20px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    height: 220px;
+    width: 400px;
+    background: #ffffff;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.15);
+    border-radius: 65px 0px;
+    @include flex(start, center, column, 25px);
+    @media screen and (max-width: 1024px) {
+      height: auto;
+      width: 100%;
+    }
+    span {
+      @include flex(center, start, row, 15px);
+    }
+  }
+
+  &__map {
+    @media screen and (max-width: 1024px) {
+      height: auto;
+      width: 100%;
+    }
+    iframe {
+      width: 680px;
+      height: 580px;
+      border: none;
+      outline: none;
+      border-radius: 65px 0px;
+      @media screen and (max-width: 1200px) {
+        width: 560px;
+      }
+      @media screen and (max-width: 1024px) {
+        height: 300px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// about
+.about {
+  .container {
+    width: 100%;
+    margin-top: 100px;
+    @include flex(center, center, row, 40px);
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    @include flex(start, center, column, 15px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+    }
+    p {
+      color: #666666;
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+
+  img {
+    width: 780px;
+    height: 312px;
+    @media screen and (max-width: 1200px) {
+      width: 560px;
+    }
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// mebel
+.header-mebel {
+  padding: 90px 0 50px;
+  width: 1180px;
+  margin: 0 auto;
+  overflow: hidden;
+  @include flex(center, space-around, row, 40px);
+  @media screen and (max-width: 1224px) {
+    width: 100%;
+    padding: 120px 15px 50px;
+  }
+
+  &__content {
+    width: 45%;
+
+    @include flex(start, center, column, 10px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+    h1 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 87%;
+      color: #d03427;
+    }
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 100%;
+      color: #05486a;
+    }
+
+    &-list {
+      margin-top: 20px;
+      @include flex(center, start, row, 25px);
+      span {
+        position: relative;
+        width: calc(100% / 3);
+        @include flex(start, start, column, 10px);
+        &::before {
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 80px;
+          height: 75px;
+          border: 1px solid #e5e5e5;
+          border-radius: 35px 0px;
+          z-index: -1;
+        }
+        img {
+          width: 50px;
+        }
+        p {
+          font-size: 14px;
+          color: #666666;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 680px;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.form {
+  padding: 50px 5vw;
+  @include flex(start, center, row, 40px);
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+  &__text {
+    width: 35%;
+    @include flex(start, start, column, 20px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+
+    ul {
+      li {
+        position: relative;
+        @include flex(center, start, row, 20px);
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+        &::before {
+          position: absolute;
+          top: 0px;
+          left: 15px;
+          content: "";
+          z-index: -1;
+          width: 40px;
+          height: 35px;
+          background: rgba(187, 187, 187, 0.31);
+          border-radius: 0px 0px 0px 15px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 130%;
+          color: #666666;
+        }
+      }
+    }
+  }
+
+  &__content {
+    max-height: 310px;
+    padding: 35px 0 0;
+    width: 65%;
+    background: #05486a;
+    border-radius: 0px 65px;
+    @include flex(end, space-between, row, 0px);
+    @media screen and (max-width: 1024px) {
+      padding: 20px;
+      width: 100%;
+    }
+
+    &-text {
+      padding: 0 0 55px 35px;
+      width: 100%;
+      @include flex(stretch, center, column, 5px);
+      @media screen and (max-width: 1024px) {
+        padding: 0 0 20px;
+      }
+      h2 {
+        font-family: "Bebas Neue";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: #ffffff;
+      }
+      p {
+        font-size: 14px;
+        line-height: 130%;
+        color: #ffffff;
+      }
+      input {
+        margin-top: 10px;
+        padding: 8px 10px;
+        width: 100%;
+        background: #ffffff;
+        border: 1px solid #bbbbbb;
+        box-shadow: 0px 4px 7px rgba(102, 102, 102, 0.2);
+        border-radius: 10px;
+      }
+      button {
+        transform: translateY(15px);
+        width: 100%;
+        height: 35px;
+        color: #fff;
+        background: linear-gradient(180deg, #e16459 0%, #d03427 100%);
+        border: 1px solid #ffffff;
+        box-shadow: 0px 4px 11px rgba(208, 52, 39, 0.5);
+        border-radius: 0px 0px 10px 10px;
+        cursor: pointer;
+      }
+    }
+
+    img {
+      width: 65%;
+      // transform: translateX(35px);
+      @media screen and (max-width: 1200px) {
+        width: 55%;
+        // transform: translateX(25px);
+      }
+      @media screen and (max-width: 758px) {
+        display: none;
+      }
+    }
+  }
+}
+
+// cupboard
+.proccess {
+  @include flex(start, start, column, 20px);
+  &__text {
+    @include flex(start, center, column, 20px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  &__list {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  &__item {
+    position: relative;
+    padding: 20px;
+    @include flex(start, start, column, 10px);
+    &::before {
+      position: absolute;
+      left: -10px;
+      top: 10px;
+      content: "";
+      width: 180px;
+      height: 165px;
+      border: 1px solid #e5e5e5;
+      border-radius: 35px 0px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 130%;
+      color: #666666;
+    }
+  }
+}
+
+.service {
+  @include flex(start, start, column, 20px);
+  &__text {
+    @include flex(start, center, column, 20px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    @include flex(start, start, column, 10px);
+    img {
+      width: 100%;
+    }
+    p {
+      position: relative;
+      padding-left: 60px;
+      line-height: 130%;
+      color: #666666;
+      &::before {
+        position: absolute;
+        top: 7px;
+        content: "";
+        left: 0px;
+        width: 40px;
+        height: 2.5px;
+        background: #d03427;
+        transition: 0.2s;
+      }
+
+      &::after {
+        position: absolute;
+        top: 4px;
+        left: 40px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: #d03427;
+        border-radius: 50%;
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+.projects-cupboard {
+  @include flex(start, start, column, 20px);
+
+  &__text {
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    gap: 20px;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 180px);
+
+      gap: 7px;
+    }
+  }
+
+  &__item {
+    @include flex(start, end, column);
+    &:hover {
+      span {
+        opacity: 1;
+      }
+    }
+    span {
+      position: relative;
+      padding: 15px 0;
+      width: 100%;
+      height: 160px;
+      color: #fff;
+      @include flex(start, end, column, 10px);
+      background: linear-gradient(
+        179.54deg,
+        rgba(5, 72, 106, 0) 0.4%,
+        #05486a 86.33%
+      );
+      opacity: 0;
+      transition: 0.2s;
+
+      p {
+        padding-left: 70px;
+        position: relative;
+        @media screen and (max-width: 1024px) {
+          padding-left: 30px;
+        }
+        &::before {
+          position: absolute;
+          top: 8px;
+          content: "";
+          left: 5px;
+          width: 40px;
+          height: 2.5px;
+          background: #d03427;
+          transition: 0.2s;
+          @media screen and (max-width: 1024px) {
+            width: 15px;
+          }
+        }
+
+        &::after {
+          position: absolute;
+          top: 5px;
+          left: 40px;
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: #d03427;
+          border-radius: 50%;
+          transition: 0.2s;
+          @media screen and (max-width: 1024px) {
+            left: 15px;
+          }
+        }
+      }
+      b {
+        padding-left: 70px;
+        @include flex(start, center, row, 20px);
+        @media screen and (max-width: 1024px) {
+          padding-left: 5px;
+        }
+        h5 {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 130%;
+          color: #ffffff;
+        }
+      }
+
+      button {
+        align-self: center;
+        cursor: pointer;
+        width: 230px;
+        height: 35px;
+        background: linear-gradient(180deg, #e16459 0%, #d03427 100%);
+        border: 1px solid #ffffff;
+        box-shadow: 0px 4px 11px rgba(208, 52, 39, 0.5);
+        border-radius: 0px 0px 10px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: #ffffff;
+        @media screen and (max-width: 1024px) {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+.container.cupboard {
+  .form {
+    @include flex(start, center, row, 40px);
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+    &__text {
+      width: 35%;
+      @include flex(start, start, column, 20px);
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+
+      h2 {
+        font-family: "Bebas Neue";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: #05486a;
+        mark {
+          color: #d03427;
+          font-family: "Bebas Neue";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 130%;
+          background: transparent;
+        }
+      }
+
+      ul {
+        li {
+          position: relative;
+          @include flex(center, start, row, 20px);
+          &:not(:first-child) {
+            margin-top: 20px;
+          }
+          &::before {
+            position: absolute;
+            top: 0px;
+            left: 15px;
+            content: "";
+            z-index: -1;
+            width: 40px;
+            height: 35px;
+            background: rgba(187, 187, 187, 0.31);
+            border-radius: 0px 0px 0px 15px;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 130%;
+            color: #666666;
+          }
+        }
+      }
+    }
+
+    &__content {
+      max-height: 310px;
+      width: 65%;
+      background: #05486a;
+      border-radius: 0px 65px;
+      @include flex(flex-end, space-between, row, 20px);
+      @media screen and (max-width: 1024px) {
+        padding: 20px;
+        width: 100%;
+      }
+
+      &-text {
+        padding: 0 0 55px 35px;
+        width: 100%;
+        @include flex(center, center, column, 5px);
+        @media screen and (max-width: 1024px) {
+          padding: 0 0 20px;
+        }
+        h2 {
+          font-family: "Bebas Neue";
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 130%;
+          color: #ffffff;
+          white-space: nowrap;
+        }
+        p {
+          font-size: 14px;
+          line-height: 130%;
+          color: #ffffff;
+        }
+        input {
+          margin-top: 10px;
+          padding: 8px 10px;
+          width: 100%;
+          background: #ffffff;
+          border: 1px solid #bbbbbb;
+          box-shadow: 0px 4px 7px rgba(102, 102, 102, 0.2);
+          border-radius: 10px;
+        }
+        button {
+          transform: translateY(15px);
+          width: 100%;
+          height: 35px;
+          color: #fff;
+          background: linear-gradient(180deg, #e16459 0%, #d03427 100%);
+          border: 1px solid #ffffff;
+          box-shadow: 0px 4px 11px rgba(208, 52, 39, 0.5);
+          border-radius: 0px 0px 10px 10px;
+          cursor: pointer;
+        }
+      }
+
+      img {
+        width: 420px;
+        margin-right: 40px;
+        object-fit: contain;
+        @media screen and (max-width: 1024px) {
+          transform: translateY(20px);
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

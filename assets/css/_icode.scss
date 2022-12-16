@@ -424,6 +424,9 @@ ol {
   padding: 35px 5vw;
   background: #05486a;
   @include flex;
+  @media screen and (max-width: 1024px) {
+    padding: 15px;
+  }
 
   &__social {
     margin-top: 60px;

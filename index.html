@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/app.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
@@ -285,573 +285,575 @@
       </div>
     </header>
 
-    <!-- Advantages -->
-    <section class="advantages">
-      <div class="advantages__img">
-        <img src="./assets/img/main/advantages.png" alt="" />
-      </div>
-      <div class="advantages__text">
-        <h2>
-          Почувствуйте на себе <br /><mark
-            >преимущества персонального заказа</mark
+    <main class="container">
+      <!-- Advantages -->
+      <section class="advantages">
+        <div class="advantages__img">
+          <img src="./assets/img/main/advantages.png" alt="" />
+        </div>
+        <div class="advantages__text">
+          <h2>
+            Почувствуйте на себе <br /><mark
+              >преимущества персонального заказа</mark
+            >
+          </h2>
+          <span>
+            <p>
+              <b>Нестандартные габариты</b> - используйте максимально
+              эргономично ваше пространство. Создавайте целостный эстетический
+              ансамбль благодаря точной подгонке
+            </p>
+            <p>
+              <b>Разнообразие</b> - откажитесь от типовых решений и ограниченных
+              цветов. Вместе с Molly Home вы можете воплоить дизайнерский
+              интерьер по доступным ценам.
+            </p>
+            <p>
+              <b> Наполнение по личным вкусам</b> - расположение элементов,
+              количество ящиков, высота полок - все это будет сделано
+              исключительно из ваших предпочтений для максимального удобства
+              повседневной жизни.
+            </p>
+          </span>
+        </div>
+      </section>
+
+      <!-- We Produce -->
+      <section class="produce">
+        <h2>мы производим</h2>
+        <div class="produce__content">
+          <a href="#" class="produce__item">
+            <p>Кухни</p>
+            <img src="./assets/img/main/produce-1.png" alt="" />
+          </a>
+          <a href="#" class="produce__item">
+            <p>Шкафы</p>
+            <img src="./assets/img/main/produce-2.png" alt="" />
+          </a>
+          <a href="#" class="produce__item">
+            <p>Шкафы-купе</p>
+            <img src="./assets/img/main/produce-3.png" alt="" />
+          </a>
+          <a href="#" class="produce__item">
+            <p>Прихожие</p>
+            <img src="./assets/img/main/produce-4.png" alt="" />
+          </a>
+          <a href="#" class="produce__item">
+            <p>Гостиные</p>
+            <img src="./assets/img/main/produce-5.png" alt="" />
+          </a>
+          <a href="#" class="produce__item">
+            <p>Мебель для ванной</p>
+            <img src="./assets/img/main/produce-6.png" alt="" />
+          </a>
+          <a href="#" class="produce__item">
+            <p>Мебель для спальни</p>
+            <img src="./assets/img/main/produce-7.png" alt="" />
+          </a>
+          <a href="#" class="produce__item">
+            <p>Гардеробные</p>
+            <img src="./assets/img/main/produce-8.png" alt="" />
+          </a>
+          <a href="#" class="produce__item">
+            <p>Мебель в детскую</p>
+            <img src="./assets/img/main/produce-9.png" alt="" />
+          </a>
+        </div>
+      </section>
+
+      <!-- Quality -->
+      <section class="quality">
+        <div class="quality__text">
+          <h2>Нашему качеству <mark>доверяют</mark></h2>
+          <p>
+            Мы являемся главным партнером передачи "Большие перемены" <br />
+            <b>на телеканале “Россия 1”</b>
+          </p>
+        </div>
+
+        <div class="quality__content">
+          <div class="quality__item">
+            <span>
+              <img
+                src="./assets/img/icons/play.svg"
+                alt=""
+                onclick="playVideo(1)"
+              />
+              <h2>Мы в эфире</h2>
+            </span>
+            <iframe
+              id="iframe-1"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/wafGGDX0mK4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="quality__item">
+            <span>
+              <img
+                src="./assets/img/icons/play.svg"
+                onclick="playVideo(2)"
+                alt=""
+              />
+              <h2>Мы в эфире</h2>
+            </span>
+            <iframe
+              id="iframe-2"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/wafGGDX0mK4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="services">
+        <div class="services__text">
+          <h2>чем мы <mark>лучше других команий?</mark></h2>
+        </div>
+        <div class="container">
+          <div class="services__content">
+            <div class="services__card active">
+              <div class="services__figure">
+                <h2>НАША КОМПАНИЯ</h2>
+              </div>
+              <div class="services__item">
+                <span>
+                  <p>
+                    Цена 1 п.м.
+                  </p>
+                  <h3>от 8 800 ₽</h3>
+                </span>
+                <span>
+                  <p>Внимание к клиентам</p>
+                  <i>
+                    <img src="./assets/img/icons/human.svg" alt="" />
+                  </i>
+                </span>
+                <span>
+                  <p>Качество</p>
+                  <h3>5/5</h3>
+                </span>
+                <span>
+                  <p>Экономия</p>
+                  <h3>до 70%</h3>
+                </span>
+              </div>
+              <div class="services__btn" onclick="orderService()">
+                Заказывайте выгодно!
+              </div>
+            </div>
+
+            <div class="services__card">
+              <div class="services__figure">
+                <h2>готовая мебель</h2>
+              </div>
+              <div class="services__item">
+                <span>
+                  <p>
+                    Цена 1 п.м.
+                  </p>
+                  <h3>от 10 800 ₽</h3>
+                </span>
+                <span>
+                  <p>Внимание к клиентам</p>
+                  <i>
+                    <img src="./assets/img/icons/human.svg" alt="" />
+                    <img src="./assets/img/icons/human.svg" alt="" />
+                    <img src="./assets/img/icons/human.svg" alt="" />
+                    <img src="./assets/img/icons/human.svg" alt="" />
+                  </i>
+                </span>
+                <span>
+                  <p>Качество</p>
+                  <h3>2/5</h3>
+                </span>
+                <span>
+                  <p>Экономия</p>
+                  <h3>до 47%</h3>
+                </span>
+              </div>
+            </div>
+
+            <div class="services__card">
+              <div class="services__figure">
+                <h2>Крупные бренды</h2>
+              </div>
+              <div class="services__item">
+                <span>
+                  <p>
+                    Цена 1 п.м.
+                  </p>
+                  <h3>от 17 500 ₽</h3>
+                </span>
+                <span>
+                  <p>Внимание к клиентам</p>
+                  <i>
+                    <img src="./assets/img/icons/human.svg" alt="" />
+                    <img src="./assets/img/icons/human.svg" alt="" />
+                  </i>
+                </span>
+                <span>
+                  <p>Качество</p>
+                  <h3>4/5</h3>
+                </span>
+                <span>
+                  <p>Экономия</p>
+                  <h3>до 15%</h3>
+                </span>
+              </div>
+            </div>
+
+            <div class="services__card">
+              <div class="services__figure">
+                <h2>салоны мебели</h2>
+              </div>
+              <div class="services__item">
+                <span>
+                  <p>
+                    Цена 1 п.м.
+                  </p>
+                  <h3>от 24 300 ₽</h3>
+                </span>
+                <span>
+                  <p>Внимание к клиентам</p>
+                  <i>
+                    <img src="./assets/img/icons/human.svg" alt="" />
+                    <img src="./assets/img/icons/human.svg" alt="" />
+                    <img src="./assets/img/icons/human.svg" alt="" />
+                  </i>
+                </span>
+                <span>
+                  <p>Качество</p>
+                  <h3>3/5</h3>
+                </span>
+                <span>
+                  <p>Экономия</p>
+                  <h3>0%</h3>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="services__img">
+            <img src="./assets/img/main/services.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="projects">
+        <div class="projects__text">
+          <h2>реализованние <mark>проекты</mark></h2>
+        </div>
+        <div class="projects__list">
+          <div
+            class="projects__item"
+            style="background: url(./assets/img/main/project.png) center/cover;"
           >
-        </h2>
-        <span>
-          <p>
-            <b>Нестандартные габариты</b> - используйте максимально эргономично
-            ваше пространство. Создавайте целостный эстетический ансамбль
-            благодаря точной подгонке
-          </p>
-          <p>
-            <b>Разнообразие</b> - откажитесь от типовых решений и ограниченных
-            цветов. Вместе с Molly Home вы можете воплоить дизайнерский интерьер
-            по доступным ценам.
-          </p>
-          <p>
-            <b> Наполнение по личным вкусам</b> - расположение элементов,
-            количество ящиков, высота полок - все это будет сделано
-            исключительно из ваших предпочтений для максимального удобства
-            повседневной жизни.
-          </p>
-        </span>
-      </div>
-    </section>
+            <span>
+              <p>Угловая кухня “Almato”</p>
+              <h3>123 250 ₽</h3>
+            </span>
+          </div>
+          <div
+            class="projects__item"
+            style="background: url(./assets/img/main/project.png) center/cover;"
+          >
+            <span>
+              <p>Угловая кухня “Almato”</p>
+              <h3>123 250 ₽</h3>
+            </span>
+          </div>
+          <div
+            class="projects__item"
+            style="background: url(./assets/img/main/project.png) center/cover;"
+          >
+            <span>
+              <p>Угловая кухня “Almato”</p>
+              <h3>123 250 ₽</h3>
+            </span>
+          </div>
+          <div
+            class="projects__item"
+            style="background: url(./assets/img/main/project.png) center/cover;"
+          >
+            <span>
+              <p>Угловая кухня “Almato”</p>
+              <h3>123 250 ₽</h3>
+            </span>
+          </div>
+          <div
+            class="projects__item"
+            style="background: url(./assets/img/main/project.png) center/cover;"
+          >
+            <span>
+              <p>Угловая кухня “Almato”</p>
+              <h3>123 250 ₽</h3>
+            </span>
+          </div>
+          <div
+            class="projects__item"
+            style="background: url(./assets/img/main/project.png) center/cover;"
+          >
+            <span>
+              <p>Угловая кухня “Almato”</p>
+              <h3>123 250 ₽</h3>
+            </span>
+          </div>
+          <div
+            class="projects__item"
+            style="background: url(./assets/img/main/project.png) center/cover;"
+          >
+            <span>
+              <p>Угловая кухня “Almato”</p>
+              <h3>123 250 ₽</h3>
+            </span>
+          </div>
+          <div
+            class="projects__item"
+            style="background: url(./assets/img/main/project.png) center/cover;"
+          >
+            <span>
+              <p>Угловая кухня “Almato”</p>
+              <h3>123 250 ₽</h3>
+            </span>
+          </div>
+        </div>
+      </section>
 
-    <!-- We Produce -->
-    <section class="produce">
-      <h2>мы производим</h2>
-      <div class="produce__content">
-        <a href="#" class="produce__item">
-          <p>Кухни</p>
-          <img src="./assets/img/main/produce-1.png" alt="" />
-        </a>
-        <a href="#" class="produce__item">
-          <p>Шкафы</p>
-          <img src="./assets/img/main/produce-2.png" alt="" />
-        </a>
-        <a href="#" class="produce__item">
-          <p>Шкафы-купе</p>
-          <img src="./assets/img/main/produce-3.png" alt="" />
-        </a>
-        <a href="#" class="produce__item">
-          <p>Прихожие</p>
-          <img src="./assets/img/main/produce-4.png" alt="" />
-        </a>
-        <a href="#" class="produce__item">
-          <p>Гостиные</p>
-          <img src="./assets/img/main/produce-5.png" alt="" />
-        </a>
-        <a href="#" class="produce__item">
-          <p>Мебель для ванной</p>
-          <img src="./assets/img/main/produce-6.png" alt="" />
-        </a>
-        <a href="#" class="produce__item">
-          <p>Мебель для спальни</p>
-          <img src="./assets/img/main/produce-7.png" alt="" />
-        </a>
-        <a href="#" class="produce__item">
-          <p>Гардеробные</p>
-          <img src="./assets/img/main/produce-8.png" alt="" />
-        </a>
-        <a href="#" class="produce__item">
-          <p>Мебель в детскую</p>
-          <img src="./assets/img/main/produce-9.png" alt="" />
-        </a>
-      </div>
-    </section>
+      <!-- Production -->
+      <section class="production">
+        <div class="production__text">
+          <h2><mark>производство</mark></h2>
+        </div>
 
-    <!-- Quality -->
-    <section class="quality">
-      <div class="quality__text">
-        <h2>Нашему качеству <mark>доверяют</mark></h2>
-        <p>
-          Мы являемся главным партнером передачи "Большие перемены" <br />
-          <b>на телеканале “Россия 1”</b>
-        </p>
-      </div>
+        <div class="production__content">
+          <div class="production__item">
+            <span>
+              <img src="./assets/img/icons/play.svg" alt="" />
+              <h2>Кухни на заказ</h2>
+            </span>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/j9xKYZz_9QU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            Наше прозводство обладает самым современным оборудованием и
+            исполльзует новейшие технологии благодаря которым мы можем
+            предлагать вам высочайшее качество по доступным ценам
+          </p>
+        </div>
+      </section>
 
-      <div class="quality__content">
-        <div class="quality__item">
-          <span>
+      <!-- Questions & Answers -->
+      <section class="questions">
+        <div class="questions__text">
+          <h2>ответы <mark>на важные вопросы</mark></h2>
+        </div>
+        <div class="container">
+          <div class="questions__list">
+            <div class="questions__item" onclick="loadAnswer(0)">
+              <span>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1814_87)">
+                    <path
+                      d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
+                      fill="#05486A"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1814_87">
+                      <rect width="32" height="32" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
+            </div>
+            <div class="questions__item" onclick="loadAnswer(1)">
+              <span>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1814_87)">
+                    <path
+                      d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
+                      fill="#05486A"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1814_87">
+                      <rect width="32" height="32" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
+            </div>
+            <div class="questions__item" onclick="loadAnswer(2)">
+              <span>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1814_87)">
+                    <path
+                      d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
+                      fill="#05486A"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1814_87">
+                      <rect width="32" height="32" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
+            </div>
+            <div class="questions__item" onclick="loadAnswer(3)">
+              <span>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1814_87)">
+                    <path
+                      d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
+                      fill="#05486A"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1814_87">
+                      <rect width="32" height="32" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
+            </div>
+            <div class="questions__item" onclick="loadAnswer(4)">
+              <span>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1814_87)">
+                    <path
+                      d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
+                      fill="#05486A"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1814_87">
+                      <rect width="32" height="32" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
+            </div>
+            <div class="questions__item" onclick="loadAnswer(5)">
+              <span>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1814_87)">
+                    <path
+                      d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
+                      fill="#05486A"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1814_87">
+                      <rect width="32" height="32" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
+            </div>
+            <div class="questions__btn">
+              Задать вопрос
+            </div>
+          </div>
+          <div class="questions__video">
             <img
+              style="transform: rotate(90deg);"
               src="./assets/img/icons/play.svg"
               alt=""
-              onclick="playVideo(1)"
+              onclick="playAnswer()"
             />
-            <h2>Мы в эфире</h2>
-          </span>
-          <iframe
-            id="iframe-1"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/wafGGDX0mK4"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <div class="quality__item">
-          <span>
             <img
-              src="./assets/img/icons/play.svg"
-              onclick="playVideo(2)"
+              src="./assets/img/icons/pause.svg"
               alt=""
+              onclick="pauseAnswer()"
             />
-            <h2>Мы в эфире</h2>
-          </span>
-          <iframe
-            id="iframe-2"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/wafGGDX0mK4"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="services">
-      <div class="services__text">
-        <h2>чем мы <mark>лучше других команий?</mark></h2>
-      </div>
-      <div class="container">
-        <div class="services__content">
-          <div class="services__card active">
-            <div class="services__figure">
-              <h2>НАША КОМПАНИЯ</h2>
-            </div>
-            <div class="services__item">
-              <span>
-                <p>
-                  Цена 1 п.м.
-                </p>
-                <h3>от 8 800 ₽</h3>
-              </span>
-              <span>
-                <p>Внимание к клиентам</p>
-                <i>
-                  <img src="./assets/img/icons/human.svg" alt="" />
-                </i>
-              </span>
-              <span>
-                <p>Качество</p>
-                <h3>5/5</h3>
-              </span>
-              <span>
-                <p>Экономия</p>
-                <h3>до 70%</h3>
-              </span>
-            </div>
-            <div class="services__btn" onclick="orderService()">
-              Заказывайте выгодно!
-            </div>
-          </div>
-
-          <div class="services__card">
-            <div class="services__figure">
-              <h2>готовая мебель</h2>
-            </div>
-            <div class="services__item">
-              <span>
-                <p>
-                  Цена 1 п.м.
-                </p>
-                <h3>от 10 800 ₽</h3>
-              </span>
-              <span>
-                <p>Внимание к клиентам</p>
-                <i>
-                  <img src="./assets/img/icons/human.svg" alt="" />
-                  <img src="./assets/img/icons/human.svg" alt="" />
-                  <img src="./assets/img/icons/human.svg" alt="" />
-                  <img src="./assets/img/icons/human.svg" alt="" />
-                </i>
-              </span>
-              <span>
-                <p>Качество</p>
-                <h3>2/5</h3>
-              </span>
-              <span>
-                <p>Экономия</p>
-                <h3>до 47%</h3>
-              </span>
-            </div>
-          </div>
-
-          <div class="services__card">
-            <div class="services__figure">
-              <h2>Крупные бренды</h2>
-            </div>
-            <div class="services__item">
-              <span>
-                <p>
-                  Цена 1 п.м.
-                </p>
-                <h3>от 17 500 ₽</h3>
-              </span>
-              <span>
-                <p>Внимание к клиентам</p>
-                <i>
-                  <img src="./assets/img/icons/human.svg" alt="" />
-                  <img src="./assets/img/icons/human.svg" alt="" />
-                </i>
-              </span>
-              <span>
-                <p>Качество</p>
-                <h3>4/5</h3>
-              </span>
-              <span>
-                <p>Экономия</p>
-                <h3>до 15%</h3>
-              </span>
-            </div>
-          </div>
-
-          <div class="services__card">
-            <div class="services__figure">
-              <h2>салоны мебели</h2>
-            </div>
-            <div class="services__item">
-              <span>
-                <p>
-                  Цена 1 п.м.
-                </p>
-                <h3>от 24 300 ₽</h3>
-              </span>
-              <span>
-                <p>Внимание к клиентам</p>
-                <i>
-                  <img src="./assets/img/icons/human.svg" alt="" />
-                  <img src="./assets/img/icons/human.svg" alt="" />
-                  <img src="./assets/img/icons/human.svg" alt="" />
-                </i>
-              </span>
-              <span>
-                <p>Качество</p>
-                <h3>3/5</h3>
-              </span>
-              <span>
-                <p>Экономия</p>
-                <h3>0%</h3>
-              </span>
-            </div>
+            <video
+              src="https://api.renderforest.com/api/v1/projects/63707067/download?key=c989db4f337dfeaed42e6e329041af2e:207a09da6ed4619886859b53f5c7a8be4b1a4120b3e280ee5d94aabbd56d8090ce15bbfc2859f4e3359568f298e2f9cf"
+            ></video>
           </div>
         </div>
-        <div class="services__img">
-          <img src="./assets/img/main/services.png" alt="" />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects -->
-    <section class="projects">
-      <div class="projects__text">
-        <h2>реализованние <mark>проекты</mark></h2>
-      </div>
-      <div class="projects__list">
-        <div
-          class="projects__item"
-          style="background: url(./assets/img/main/project.png) center/cover;"
-        >
-          <span>
-            <p>Угловая кухня “Almato”</p>
-            <h3>123 250 ₽</h3>
-          </span>
-        </div>
-        <div
-          class="projects__item"
-          style="background: url(./assets/img/main/project.png) center/cover;"
-        >
-          <span>
-            <p>Угловая кухня “Almato”</p>
-            <h3>123 250 ₽</h3>
-          </span>
-        </div>
-        <div
-          class="projects__item"
-          style="background: url(./assets/img/main/project.png) center/cover;"
-        >
-          <span>
-            <p>Угловая кухня “Almato”</p>
-            <h3>123 250 ₽</h3>
-          </span>
-        </div>
-        <div
-          class="projects__item"
-          style="background: url(./assets/img/main/project.png) center/cover;"
-        >
-          <span>
-            <p>Угловая кухня “Almato”</p>
-            <h3>123 250 ₽</h3>
-          </span>
-        </div>
-        <div
-          class="projects__item"
-          style="background: url(./assets/img/main/project.png) center/cover;"
-        >
-          <span>
-            <p>Угловая кухня “Almato”</p>
-            <h3>123 250 ₽</h3>
-          </span>
-        </div>
-        <div
-          class="projects__item"
-          style="background: url(./assets/img/main/project.png) center/cover;"
-        >
-          <span>
-            <p>Угловая кухня “Almato”</p>
-            <h3>123 250 ₽</h3>
-          </span>
-        </div>
-        <div
-          class="projects__item"
-          style="background: url(./assets/img/main/project.png) center/cover;"
-        >
-          <span>
-            <p>Угловая кухня “Almato”</p>
-            <h3>123 250 ₽</h3>
-          </span>
-        </div>
-        <div
-          class="projects__item"
-          style="background: url(./assets/img/main/project.png) center/cover;"
-        >
-          <span>
-            <p>Угловая кухня “Almato”</p>
-            <h3>123 250 ₽</h3>
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Production -->
-    <section class="production">
-      <div class="production__text">
-        <h2><mark>производство</mark></h2>
-      </div>
-
-      <div class="production__content">
-        <div class="production__item">
-          <span>
-            <img src="./assets/img/icons/play.svg" alt="" />
-            <h2>Кухни на заказ</h2>
-          </span>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/j9xKYZz_9QU"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+      <!-- SEO header -->
+      <section class="seo">
+        <div class="seo__text">
+          <h2><mark>СЕО заголовок</mark></h2>
         </div>
         <p>
-          Наше прозводство обладает самым современным оборудованием и
-          исполльзует новейшие технологии благодаря которым мы можем предлагать
-          вам высочайшее качество по доступным ценам
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa et
+          velit sit ipsum quis nullam. Tortor sagittis facilisis dictum duis
+          purus est. Venenatis auctor rhoncus dictum vitae justo in sem orci.
+          Eget at sit facilisi purus. Eu lobortis sed vel, netus consequat,
+          etiam turpis auctor. At eu nisl eleifend iaculis vestibulum tempor.
+          Accumsan, ac quis arcu viverra accumsan neque ut. Et tellus nunc amet,
+          magna. Ridiculus laoreet et diam at in lectus lobortis lectus. Hac ac
+          mattis semper ac tincidunt id nibh sed facilisis. Eu mauris orci
+          sodales quam. Elementum dictum elit laoreet mattis orci.
         </p>
-      </div>
-    </section>
-
-    <!-- Questions & Answers -->
-    <section class="questions">
-      <div class="questions__text">
-        <h2>ответы <mark>на важные вопросы</mark></h2>
-      </div>
-      <div class="container">
-        <div class="questions__list">
-          <div class="questions__item" onclick="loadAnswer(0)">
-            <span>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_1814_87)">
-                  <path
-                    d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
-                    fill="#05486A"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_1814_87">
-                    <rect width="32" height="32" fill="white"></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-            <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
-          </div>
-          <div class="questions__item" onclick="loadAnswer(1)">
-            <span>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_1814_87)">
-                  <path
-                    d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
-                    fill="#05486A"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_1814_87">
-                    <rect width="32" height="32" fill="white"></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-            <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
-          </div>
-          <div class="questions__item" onclick="loadAnswer(2)">
-            <span>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_1814_87)">
-                  <path
-                    d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
-                    fill="#05486A"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_1814_87">
-                    <rect width="32" height="32" fill="white"></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-            <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
-          </div>
-          <div class="questions__item" onclick="loadAnswer(3)">
-            <span>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_1814_87)">
-                  <path
-                    d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
-                    fill="#05486A"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_1814_87">
-                    <rect width="32" height="32" fill="white"></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-            <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
-          </div>
-          <div class="questions__item" onclick="loadAnswer(4)">
-            <span>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_1814_87)">
-                  <path
-                    d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
-                    fill="#05486A"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_1814_87">
-                    <rect width="32" height="32" fill="white"></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-            <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
-          </div>
-          <div class="questions__item" onclick="loadAnswer(5)">
-            <span>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_1814_87)">
-                  <path
-                    d="M16 0C20.2435 0 24.3131 1.68571 27.3137 4.68629C30.3143 7.68687 32 11.7565 32 16C32 20.2435 30.3143 24.3131 27.3137 27.3137C24.3131 30.3143 20.2435 32 16 32C11.7565 32 7.68687 30.3143 4.68629 27.3137C1.68571 24.3131 0 20.2435 0 16C0 11.7565 1.68571 7.68687 4.68629 4.68629C7.68687 1.68571 11.7565 0 16 0ZM10.186 18.42C10.0795 18.5695 10.0163 18.7455 10.0032 18.9286C9.99006 19.1116 10.0276 19.2948 10.1117 19.458C10.1957 19.6212 10.3231 19.758 10.4798 19.8537C10.6365 19.9493 10.8164 19.9999 11 20H21C21.1836 19.9999 21.3635 19.9493 21.5202 19.8537C21.6769 19.758 21.8043 19.6212 21.8883 19.458C21.9724 19.2948 22.0099 19.1116 21.9968 18.9286C21.9837 18.7455 21.9205 18.5695 21.814 18.42L16.814 11.42C16.7215 11.2904 16.5994 11.1847 16.4578 11.1118C16.3162 11.0389 16.1593 11.0009 16 11.0009C15.8407 11.0009 15.6838 11.0389 15.5422 11.1118C15.4006 11.1847 15.2785 11.2904 15.186 11.42L10.186 18.42Z"
-                    fill="#05486A"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_1814_87">
-                    <rect width="32" height="32" fill="white"></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-            <p>Почему ваша мебель стоит дешевле чем у конкурентов?</p>
-          </div>
-          <div class="questions__btn">
-            Задать вопрос
-          </div>
-        </div>
-        <div class="questions__video">
-          <img
-            style="transform: rotate(90deg);"
-            src="./assets/img/icons/play.svg"
-            alt=""
-            onclick="playAnswer()"
-          />
-          <img
-            src="./assets/img/icons/pause.svg"
-            alt=""
-            onclick="pauseAnswer()"
-          />
-          <video
-            src="https://api.renderforest.com/api/v1/projects/63707067/download?key=c989db4f337dfeaed42e6e329041af2e:207a09da6ed4619886859b53f5c7a8be4b1a4120b3e280ee5d94aabbd56d8090ce15bbfc2859f4e3359568f298e2f9cf"
-          ></video>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEO header -->
-    <section class="seo">
-      <div class="seo__text">
-        <h2><mark>СЕО заголовок</mark></h2>
-      </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa et velit
-        sit ipsum quis nullam. Tortor sagittis facilisis dictum duis purus est.
-        Venenatis auctor rhoncus dictum vitae justo in sem orci. Eget at sit
-        facilisi purus. Eu lobortis sed vel, netus consequat, etiam turpis
-        auctor. At eu nisl eleifend iaculis vestibulum tempor. Accumsan, ac quis
-        arcu viverra accumsan neque ut. Et tellus nunc amet, magna. Ridiculus
-        laoreet et diam at in lectus lobortis lectus. Hac ac mattis semper ac
-        tincidunt id nibh sed facilisis. Eu mauris orci sodales quam. Elementum
-        dictum elit laoreet mattis orci.
-      </p>
-      <div class="seo__btn">Показать ещё</div>
-    </section>
+        <div class="seo__btn">Показать ещё</div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
