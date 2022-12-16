@@ -38,8 +38,12 @@ ol {
   @include flex(start, space-between, row);
   box-shadow: 4px 4px 19px rgba(0, 0, 0, 0.15);
   z-index: 3;
+  @media screen and (max-width: 1180px) {
+    padding: 0 15px;
+  }
   @media screen and (max-width: 576px) {
     height: 60px;
+    @include flex(center, space-between, row);
   }
 
   //?   Logo
@@ -145,20 +149,13 @@ ol {
     }
   }
 
-  &__bar {
-    height: 100%;
+  &__menu {
     display: none;
-    @media screen and (max-width: 1024px) {
-      @include flex;
-      img {
-        cursor: pointer;
-        width: 50px;
-        height: 50px;
-        object-fit: contain;
-        &:last-child {
-          display: none;
-        }
-      }
+    @media screen and (max-width: 1200px) {
+      display: block;
+      height: 50px;
+      width: 30px;
+      background: url(../img/icons/bar.png) center/cover;
     }
   }
 
@@ -400,16 +397,12 @@ ol {
 }
 
 .nav.active {
-  .nav__bar {
-    img {
-      &:first-child {
-        display: none;
-      }
-      &:last-child {
-        display: block;
-      }
-    }
+  .nav__menu {
+    height: 25px;
+    width: 25px;
+    background: url(../img/icons/close.png) center/cover;
   }
+
   .nav__list {
     display: flex;
   }

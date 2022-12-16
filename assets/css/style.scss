@@ -1256,7 +1256,6 @@ main.container {
 }
 
 .form {
-  padding: 50px 5vw;
   @include flex(start, center, row, 40px);
   @media screen and (max-width: 1024px) {
     flex-direction: column;
@@ -1314,6 +1313,7 @@ main.container {
   }
 
   &__content {
+    position: relative;
     max-height: 310px;
     padding: 35px 0 0;
     width: 65%;
@@ -1327,10 +1327,13 @@ main.container {
 
     &-text {
       padding: 0 0 55px 35px;
-      width: 100%;
+      width: 230px;
       @include flex(stretch, center, column, 5px);
       @media screen and (max-width: 1024px) {
         padding: 0 0 20px;
+      }
+      @media screen and (max-width: 758px) {
+        width: 100%;
       }
       h2 {
         font-family: "Bebas Neue";
@@ -1338,6 +1341,7 @@ main.container {
         font-size: 24px;
         line-height: 130%;
         color: #ffffff;
+        white-space: nowrap;
       }
       p {
         font-size: 14px;
@@ -1367,11 +1371,15 @@ main.container {
     }
 
     img {
-      width: 65%;
+      position: absolute;
+      right: 0;
+      width: 450px;
+      height: 350px;
+      object-position: bottom;
+      object-fit: cover;
       // transform: translateX(35px);
-      @media screen and (max-width: 1200px) {
-        width: 55%;
-        // transform: translateX(25px);
+      @media screen and (max-width: 1024px) {
+        transform: translateY(20px);
       }
       @media screen and (max-width: 758px) {
         display: none;
@@ -1409,12 +1417,25 @@ main.container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+    }
   }
 
   &__item {
     position: relative;
     padding: 20px;
     @include flex(start, start, column, 10px);
+    @media screen and (max-width: 576px) {
+      flex-direction: row;
+      gap: 20px;
+    }
     &::before {
       position: absolute;
       left: -10px;
@@ -1424,6 +1445,10 @@ main.container {
       height: 165px;
       border: 1px solid #e5e5e5;
       border-radius: 35px 0px;
+      @media screen and (max-width: 576px) {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     p {
@@ -1743,6 +1768,7 @@ main.container {
       }
 
       img {
+        position: static;
         width: 420px;
         margin-right: 40px;
         object-fit: contain;
@@ -1750,6 +1776,722 @@ main.container {
           transform: translateY(20px);
           margin-right: 20px;
         }
+      }
+    }
+  }
+}
+
+// kitchen
+.header-kitchen {
+  padding: 90px 0 50px;
+  width: 1180px;
+  margin: 0 auto;
+  overflow: hidden;
+  @media screen and (max-width: 1224px) {
+    width: 100%;
+    padding: 120px 15px 50px;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 70px 15px 40px;
+  }
+  .container {
+    @include flex(center, space-around, row, 40px);
+    @media screen and (max-width: 1024px) {
+      gap: 20px;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+    width: 65%;
+    @include flex;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+    .swiper-slide {
+      img {
+        width: 100%;
+        @media screen and (max-width: 1024px) {
+          height: 200px;
+        }
+      }
+    }
+
+    .swiper-pagination {
+      position: relative;
+      bottom: 0 !important;
+      min-width: 80px;
+      min-height: 32px;
+      max-width: 80px;
+      max-height: 32px;
+      @include flex;
+    }
+
+    &-box {
+      position: absolute;
+      margin-left: 100px;
+      bottom: 20px;
+      width: 140px;
+      background: #fff;
+      border-radius: 10px;
+      @include flex;
+      z-index: 11;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-top: 200px;
+    @include flex(start, center, column, 10px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 87%;
+      color: #d03427;
+    }
+  }
+
+  &__colors {
+    @include flex(center, start, row, 12px);
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+    label {
+      &:nth-child(2) input {
+        background: #05486a;
+      }
+      &:nth-child(3) input {
+        background: #ff8a00;
+      }
+      &:nth-child(4) input {
+        background: #e16459;
+      }
+      input {
+        appearance: none;
+        min-height: 30px;
+        min-width: 30px;
+        border-radius: 50%;
+        background: #d9d9d9;
+        transition: 0.2s;
+        &:checked {
+          box-shadow: 0 0 0 2px #fff, 0 0 0 4px #d03427;
+          & + img {
+            display: block;
+          }
+        }
+      }
+      img {
+        position: absolute;
+        left: 0;
+        transform: translateY(-240px);
+        width: 260px;
+        height: 150px;
+        display: none;
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__price {
+    @include flex(center, start, row, 20px);
+    span {
+      del {
+        font-weight: 400;
+        font-size: 14px;
+        color: #666666;
+      }
+      h3 {
+        font-weight: 400;
+        font-size: 20px;
+        color: #05486a;
+      }
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    width: 180px;
+    height: 35px;
+    background: linear-gradient(180deg, #e16459 0%, #d03427 100%);
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 11px rgba(208, 52, 39, 0.5);
+    border-radius: 0px 0px 10px 10px;
+    font-size: 14px;
+    line-height: 130%;
+    color: #ffffff;
+    @include flex;
+  }
+
+  &__text {
+    margin-top: 50px;
+    @include flex(center, space-between, row, 20px);
+    @media screen and (max-width: 1024px) {
+      gap: 20px;
+      flex-direction: column;
+    }
+    h1 {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 87%;
+      color: #d03427;
+    }
+    p {
+      width: 60%;
+      font-size: 14px;
+      color: #666666;
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.about-company {
+  @include flex;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+  img {
+    width: 680px;
+    height: 350px;
+    @media screen and (max-width: 758px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+  span {
+    margin-right: 10px;
+    padding: 40px 25px;
+    background: #ffffff;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 65px 0px;
+    button {
+      width: 180px;
+      height: 35px;
+      color: #d03427;
+      background: transparent;
+      border: 1px solid #d03427;
+      border-radius: 0px 0px 5px 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.order {
+  padding: 50px 5vw;
+  @include flex(center, space-between, row, 40px);
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__text {
+    @include flex(start, center, column, 20px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+    ul {
+      li {
+        padding-left: 10px;
+        @include flex(center, start, row, 20px);
+        &:not(:first-child) {
+          margin-top: 15px;
+        }
+        h3 {
+          height: 55px;
+          width: 40px;
+          color: #fff;
+          background: #d03427;
+          border-radius: 15px 0px 0px 0;
+          @include flex;
+          font-family: "Bebas Neue";
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 130%;
+          color: #ffffff;
+          transform: rotate(-90deg);
+        }
+        p {
+          font-size: 14px;
+          line-height: 130%;
+          color: #666666;
+        }
+      }
+    }
+    span {
+      @include flex(center, start, row, 40px);
+      h4 {
+        font-size: 14px;
+        line-height: 130%;
+        color: #05486a;
+      }
+      button {
+        cursor: pointer;
+        width: 230px;
+        height: 35px;
+        background: linear-gradient(180deg, #e16459 0%, #d03427 100%);
+        border: 1px solid #ffffff;
+        box-shadow: 0px 4px 11px rgba(208, 52, 39, 0.5);
+        border-radius: 0px 0px 10px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: #ffffff;
+      }
+    }
+  }
+
+  img {
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+}
+
+.service-kitchen {
+  padding: 50px 5vw;
+  @include flex(start, start, column, 20px);
+  &__text {
+    @include flex(start, center, column, 20px);
+    h2 {
+      font-family: "Bebas Neue";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7px;
+    }
+  }
+
+  &__item {
+    @include flex(start, start, column, 10px);
+    img {
+      width: 100%;
+    }
+    p {
+      position: relative;
+      padding-left: 60px;
+      line-height: 130%;
+      color: #666666;
+      &::before {
+        position: absolute;
+        top: 7px;
+        content: "";
+        left: 0px;
+        width: 40px;
+        height: 2.5px;
+        background: #d03427;
+        transition: 0.2s;
+      }
+
+      &::after {
+        position: absolute;
+        top: 4px;
+        left: 40px;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: #d03427;
+        border-radius: 50%;
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+.quality-kitchen {
+  padding: 50px 5vw;
+  @include flex(start, start, column, 20px);
+
+  &__text {
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    li {
+      @include flex(start, start, column, 10px);
+      img {
+        width: 100%;
+      }
+      span {
+        padding: 0 20px;
+        height: 40px;
+        width: 100%;
+        background: #d03427;
+        border-radius: 0px 0px 0px 15px;
+        @include flex(center, start, row, 10px);
+        img {
+          width: 30px;
+        }
+        h2 {
+          font-family: "Bebas Neue";
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 130%;
+          color: #ffffff;
+        }
+      }
+      p {
+        font-size: 14px;
+        line-height: 130%;
+        color: #666666;
+      }
+    }
+  }
+}
+
+.container.kitchen .projects-cupboard__list {
+  grid-template-rows: 280px;
+}
+
+.popular {
+  padding: 50px 5vw;
+  @include flex(start, start, column, 20px);
+
+  &__text {
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 280px);
+    gap: 20px;
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 240px);
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include flex(start, end, column);
+    &:hover {
+      span {
+        &:nth-child(1) {
+          opacity: 0;
+        }
+        &:nth-child(2) {
+          opacity: 1;
+        }
+      }
+    }
+    span {
+      position: relative;
+      padding: 15px 0;
+      width: 100%;
+      color: #fff;
+
+      // opacity: 0;
+      transition: 0.2s;
+
+      &:nth-child(1) {
+        height: 160px;
+        background: linear-gradient(
+          179.54deg,
+          rgba(5, 72, 106, 0) 0.4%,
+          #05486a 86.33%
+        );
+        @include flex(start, end, column, 10px);
+        transition: 0.2s;
+        p {
+          padding-left: 70px;
+          position: relative;
+          font-weight: 400;
+          line-height: 130%;
+          color: #ffffff;
+          &::before {
+            position: absolute;
+            top: 8px;
+            content: "";
+            left: 5px;
+            width: 40px;
+            height: 2.5px;
+            background: #d03427;
+            transition: 0.2s;
+          }
+
+          &::after {
+            position: absolute;
+            top: 5px;
+            left: 40px;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: #d03427;
+            border-radius: 50%;
+            transition: 0.2s;
+          }
+
+          b {
+            font-weight: 600;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        padding: 20px 70px;
+        height: 100%;
+        background: #05486ae5;
+        @include flex(start, center, column);
+        transition: 0.2s;
+        opacity: 0;
+        button,
+        u {
+          margin-top: 10px;
+        }
+
+        h3 {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 130%;
+          align-self: center;
+        }
+
+        button {
+          width: 100%;
+          &:last-child {
+            background: transparent;
+            border: 1px solid #ffffff;
+          }
+        }
+      }
+
+      button {
+        align-self: center;
+        cursor: pointer;
+        width: 230px;
+        height: 35px;
+        background: linear-gradient(180deg, #e16459 0%, #d03427 100%);
+        border: 1px solid #ffffff;
+        box-shadow: 0px 4px 11px rgba(208, 52, 39, 0.5);
+        border-radius: 0px 0px 10px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.discount {
+  @include flex(start, start, column, 20px);
+
+  &__text {
+    h2 {
+      font-family: "Bebas Neue";
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      color: #05486a;
+      mark {
+        color: #d03427;
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        background: transparent;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 15px 20px 15px 0;
+    background: #05486a;
+    border-radius: 35px 0px;
+    @include flex(center, start, row, 20px);
+    overflow: hidden;
+    &:nth-child(3) {
+      padding: 0;
+      grid-row-start: span 2;
+      @include flex(center, space-between, column-reverse);
+      span {
+        padding: 20px;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    img {
+      width: 25%;
+    }
+
+    span {
+      width: 75%;
+      h4 {
+        color: #fff;
+        @media screen and (max-width: 768px) {
+          width: 80%;
+        }
+      }
+      p {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 130%;
+        color: #ffffff;
+      }
+    }
+
+    &-count {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 55px;
+      height: 40px;
+      background: #d03427;
+      border-radius: 0px 0px 0px 15px;
+      @include flex;
+      h2 {
+        font-family: "Bebas Neue";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: #ffffff;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+.warranty {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__item {
+    position: relative;
+    @include flex;
+    &::before {
+      position: absolute;
+      left: 10px;
+      top: -10px;
+      content: "";
+      width: 180px;
+      height: 150px;
+      border: 1px solid #e5e5e5;
+      border-radius: 35px 0px;
+      z-index: -1;
+    }
+
+    img {
+      width: 35%;
+    }
+    span {
+      position: relative;
+      width: 80%;
+
+      margin-left: 10px;
+      h3 {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 130%;
+        color: #666666;
+        margin-bottom: 10px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: #666666;
       }
     }
   }
